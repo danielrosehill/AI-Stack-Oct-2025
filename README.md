@@ -1,9 +1,45 @@
 # AI Stack Documentation
-### October 27, 2025
+
+![Last Updated](https://img.shields.io/badge/Last_Updated-October_2025-blue?style=for-the-badge)
+![Stack Type](https://img.shields.io/badge/Stack-Production_Ready-green?style=for-the-badge)
+![License](https://img.shields.io/badge/License-Personal_Use-orange?style=for-the-badge)
 
 A point-in-time overview of my AI infrastructure, tools, and services for development, deployment, and production workflows.
 
 > **Note**: This is not prescriptive. It's a snapshot of what I, as one person, see value in and my thoughts. Everybody is different. I update this roughly once a year, though the pace of evolution in this space is rapid enough that monthly updates would make sense.
+
+## 🎯 Stack At a Glance
+
+| Component | Primary Choice | Favorite Feature |
+|-----------|----------------|------------------|
+| **LLM Interface** | ![Claude Code](https://img.shields.io/badge/Claude_Code-CLI-191919?style=flat) | CLI-based development |
+| **API Gateway** | ![OpenRouter](https://img.shields.io/badge/OpenRouter-Multi_Model-9333EA?style=flat) | Unified API access |
+| **STT** | ![AssemblyAI](https://img.shields.io/badge/AssemblyAI-Diarization-00C58E?style=flat) | Speaker diarization |
+| **TTS** | ![OpenAI](https://img.shields.io/badge/OpenAI-Budget-412991?style=flat) | Cost-effective |
+| **Generative AI** | ![Replicate](https://img.shields.io/badge/Replicate-Marketplace-000000?style=flat) | Model exploration |
+| **RAG** | ![Supermemory](https://img.shields.io/badge/Supermemory-Managed-9333EA?style=flat) | No DIY complexity |
+| **Research** | ![NotebookLM](https://img.shields.io/badge/NotebookLM-Favorite-4285F4?style=flat) | Knowledge synthesis |
+| **Cloud** | ![GCP](https://img.shields.io/badge/Google_Cloud-Platform-4285F4?style=flat) | Primary provider |
+| **Local AI** | ![Ollama](https://img.shields.io/badge/Ollama-CLI-000000?style=flat) | Batch processing |
+
+## 📑 Quick Navigation
+
+| Category | What's Inside |
+|----------|---------------|
+| [🧠 Core Infrastructure](#-core-infrastructure) | LLMs, API gateways, MCP |
+| [🎙️ Voice Applications](#️-voice-applications) | STT, TTS, live audio |
+| [🎨 Generative AI](#-generative-ai) | Image, video, multi-modal |
+| [📊 Data & Retrieval](#-data-retrieval--processing) | RAG, web scraping, OCR |
+| [💻 Development](#-development-tools) | Code generation, hosting |
+| [☁️ Cloud & Deployment](#️-cloud--deployment) | Infrastructure, serverless |
+| [🔌 API Services](#-api-services) | Multi-model platforms |
+| [🖥️ Local AI](#️-local-ai-infrastructure) | Self-hosted solutions |
+| [⚙️ Automation](#️-automation--workflows) | Workflows, voice pipelines |
+| [🔵 Google Ecosystem](#-google-ecosystem) | NotebookLM, AI Studio |
+| [💰 Cost Breakdown](#-cost-breakdown) | Budget transparency |
+| [💡 Philosophy](#-key-insights--philosophy) | Lessons and insights |
+
+---
 
 ## Why This Exists
 
@@ -18,9 +54,12 @@ Friends and clients sometimes ask: "With so much on the market, what are you usi
 The AI space moves quickly enough that these notes could be out of date in months, but I find it useful to document where things stand.
  
 
-## Core Infrastructure
+## 🧠 Core Infrastructure
 
 ### Large Language Models
+![Category](https://img.shields.io/badge/Category-LLMs-9333EA?style=flat-square)
+![Priority](https://img.shields.io/badge/Priority-Critical-red?style=flat-square)
+
 The backbone of the entire AI stack, powering nearly every component and workflow.
 
 **Primary Interfaces:**
@@ -94,9 +133,11 @@ Having a mix of open-source and commercial models through one API is convenient 
 
 ---
 
-## Voice Applications
+## 🎙️ Voice Applications
 
 ### Speech-to-Text (STT)
+![Category](https://img.shields.io/badge/Category-Voice-00C58E?style=flat-square)
+![Use Case](https://img.shields.io/badge/Use_Case-Transcription-blue?style=flat-square)
 
 **Primary Services:**
 - **[Whisper][whisper]** (via OpenAI API): Solid baseline, good value
@@ -125,6 +166,8 @@ Having a mix of open-source and commercial models through one API is convenient 
 - **General reliability**: Gladio
 
 ### Text-to-Speech (TTS)
+![Category](https://img.shields.io/badge/Category-Voice-000000?style=flat-square)
+![Use Case](https://img.shields.io/badge/Use_Case-Audio_Generation-blue?style=flat-square)
 
 **Premium Option:**
 - **[ElevenLabs][elevenlabs]**: Best-in-class quality with excellent expressiveness
@@ -147,9 +190,11 @@ Requires separate API subscriptions. Generally expensive but essential for live 
 
 ---
 
-## Generative AI
+## 🎨 Generative AI
 
 ### Multi-Modal Generation Platforms
+![Category](https://img.shields.io/badge/Category-Generative_AI-FF4785?style=flat-square)
+![Use Case](https://img.shields.io/badge/Use_Case-Multi_Modal-purple?style=flat-square)
 
 **Primary Platforms:**
 - **[Replicate][replicate]**: Good for model exploration and API-based workflows
@@ -204,9 +249,11 @@ I don't have strong opinions about which is better. Fal seems to have more Chine
 
 ---
 
-## Data Retrieval & Processing
+## 📊 Data Retrieval & Processing
 
 ### Internal Data (RAG)
+![Category](https://img.shields.io/badge/Category-RAG-6366F1?style=flat-square)
+![Use Case](https://img.shields.io/badge/Use_Case-Knowledge_Base-blue?style=flat-square)
 Retrieval-Augmented Generation for working with proprietary datasets and knowledge bases.
 
 **RAG-as-a-Service:**
@@ -219,6 +266,8 @@ Unless you have enterprise-level document stores, building RAG from scratch ([Pi
 > **Note**: For most use cases not at massive scale, managed RAG services save setup time for relatively simple document retrieval tasks.
 
 ### External Data
+![Category](https://img.shields.io/badge/Category-Web_Scraping-FF4500?style=flat-square)
+![Use Case](https://img.shields.io/badge/Use_Case-Data_Collection-blue?style=flat-square)
 
 **[Firecrawl][firecrawl]**: Web scraping and data extraction
 
@@ -253,9 +302,11 @@ If I wrote notes a few years ago, I can use Firecrawl to pull them in. It's quic
 
 ---
 
-## Development Tools
+## 💻 Development Tools
 
 ### Code Generation & Editing
+![Category](https://img.shields.io/badge/Category-Development-181717?style=flat-square)
+![Use Case](https://img.shields.io/badge/Use_Case-Coding-blue?style=flat-square)
 
 **Primary Tools:**
 - **[Claude Code][claude-code]** (CLI-based development)
@@ -267,9 +318,11 @@ If I wrote notes a few years ago, I can use Firecrawl to pull them in. It's quic
 
 ---
 
-## Cloud & Deployment
+## ☁️ Cloud & Deployment
 
 ### Cloud Infrastructure
+![Category](https://img.shields.io/badge/Category-Cloud-4285F4?style=flat-square)
+![Use Case](https://img.shields.io/badge/Use_Case-Infrastructure-blue?style=flat-square)
 - **[Google Cloud Platform (GCP)][gcp]**: Primary cloud provider
 
 ### Deployment Platforms
@@ -290,9 +343,11 @@ If I wrote notes a few years ago, I can use Firecrawl to pull them in. It's quic
 
 ---
 
-## API Services
+## 🔌 API Services
 
 ### Versatile AI APIs
+![Category](https://img.shields.io/badge/Category-APIs-9333EA?style=flat-square)
+![Use Case](https://img.shields.io/badge/Use_Case-Integration-blue?style=flat-square)
 
 **Multi-Model Platforms:**
 - **[OpenRouter][openrouter]** (unified API access)
@@ -303,9 +358,11 @@ If I wrote notes a few years ago, I can use Firecrawl to pull them in. It's quic
 
 ---
 
-## Local AI Infrastructure
+## 🖥️ Local AI Infrastructure
 
 ### Software Stack
+![Category](https://img.shields.io/badge/Category-Local_AI-000000?style=flat-square)
+![Use Case](https://img.shields.io/badge/Use_Case-Self_Hosted-blue?style=flat-square)
 - **[LM Studio][lmstudio]**: GUI interface for local models
 - **[Ollama][ollama]**: CLI-based local inference
 
@@ -348,9 +405,11 @@ If I wrote notes a few years ago, I can use Firecrawl to pull them in. It's quic
 
 ---
 
-## Automation & Workflows
+## ⚙️ Automation & Workflows
 
 ### Automation Pipelines
+![Category](https://img.shields.io/badge/Category-Automation-EA4B71?style=flat-square)
+![Use Case](https://img.shields.io/badge/Use_Case-Workflows-blue?style=flat-square)
 - **[N8N][n8n]**: Visual workflow automation
 
 ### Voice-First Workflows
@@ -375,7 +434,10 @@ This document itself was created using this pattern:
 
 ---
 
-## Google Ecosystem
+## 🔵 Google Ecosystem
+
+![Category](https://img.shields.io/badge/Category-Google-4285F4?style=flat-square)
+![Use Case](https://img.shields.io/badge/Use_Case-Research_&_Dev-blue?style=flat-square)
 
 **Integrated Services:**
 - **[NotebookLM][notebooklm]**: Free with Google Workspace - **Favorite tool** for research and knowledge synthesis
@@ -431,7 +493,10 @@ This is working backwards from the OpenAI approach. They have you chat with Chat
 
 ---
 
-## Cost Breakdown
+## 💰 Cost Breakdown
+
+![Category](https://img.shields.io/badge/Category-Budget-green?style=flat-square)
+![Transparency](https://img.shields.io/badge/Transparency-Open-blue?style=flat-square)
 
 ### Monthly Subscriptions
 
@@ -451,7 +516,10 @@ This is working backwards from the OpenAI approach. They have you chat with Chat
 
 ---
 
-## Key Insights & Philosophy
+## 💡 Key Insights & Philosophy
+
+![Category](https://img.shields.io/badge/Category-Philosophy-orange?style=flat-square)
+![Experience](https://img.shields.io/badge/Experience-Production-green?style=flat-square)
 
 ### What I Find Most Useful
 
@@ -484,24 +552,124 @@ This AI stack reflects a few principles:
 ## Links & Resources
 
 ### Core AI Platforms
+
+| Service | Description | Link |
+|---------|-------------|------|
+| ![Claude](https://img.shields.io/badge/Claude-AI-191919?style=flat&logo=anthropic) | Primary LLM interface | [claude.ai](https://claude.ai) |
+| ![Claude Code](https://img.shields.io/badge/Claude_Code-CLI-191919?style=flat&logo=anthropic) | CLI development tool | [docs.claude.com](https://docs.claude.com/claude-code) |
+| ![ChatGPT](https://img.shields.io/badge/ChatGPT-AI-412991?style=flat&logo=openai) | Day-to-day LLM interface | [chat.openai.com](https://chat.openai.com) |
+| ![OpenAI](https://img.shields.io/badge/OpenAI-API-412991?style=flat&logo=openai) | LLM API access | [openai.com](https://openai.com) |
+| ![Gemini](https://img.shields.io/badge/Gemini-AI-4285F4?style=flat&logo=google) | Google's LLM platform | [gemini.google.com](https://gemini.google.com) |
+| ![OpenRouter](https://img.shields.io/badge/OpenRouter-API_Gateway-9333EA?style=flat) | Unified multi-model API | [openrouter.ai](https://openrouter.ai) |
+
+### Development Tools
+
+| Tool | Description | Link |
+|------|-------------|------|
+| ![GitHub Copilot](https://img.shields.io/badge/GitHub_Copilot-AI_Assistant-181717?style=flat&logo=github) | Code completion | [github.com/features/copilot](https://github.com/features/copilot) |
+| ![Aider](https://img.shields.io/badge/Aider-Pair_Programming-00ADD8?style=flat) | AI pair programming | [aider.chat](https://aider.chat) |
+| ![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=flat&logo=github) | Code hosting | [github.com](https://github.com) |
+| ![Open Interpreter](https://img.shields.io/badge/Open_Interpreter-CLI-000000?style=flat) | Natural language interface | [GitHub](https://github.com/KillianLucas/open-interpreter) |
+
+### Model Context Protocol (MCP)
+
+| Service | Description | Link |
+|---------|-------------|------|
+| ![Smithery](https://img.shields.io/badge/Smithery-MCP_Hub-FF6B6B?style=flat) | MCP marketplace | [smithery.ai](https://smithery.ai) |
+| ![MCP Servers](https://img.shields.io/badge/MCP-Servers-181717?style=flat&logo=github) | Official MCP servers | [GitHub](https://github.com/modelcontextprotocol/servers) |
+
+### Speech & Voice
+
+| Service | Type | Description | Link |
+|---------|------|-------------|------|
+| ![Whisper](https://img.shields.io/badge/Whisper-STT-412991?style=flat&logo=openai) | STT | Baseline transcription | [openai.com/research/whisper](https://openai.com/research/whisper) |
+| ![AssemblyAI](https://img.shields.io/badge/AssemblyAI-STT-00C58E?style=flat) | STT | Long-form with diarization | [assemblyai.com](https://www.assemblyai.com) |
+| ![Deepgram](https://img.shields.io/badge/Deepgram-STT-13EF93?style=flat) | STT | Task-dependent | [deepgram.com](https://deepgram.com) |
+| ![Speechmatics](https://img.shields.io/badge/Speechmatics-STT-00C4CC?style=flat) | STT | Advanced voice platform | [speechmatics.com](https://www.speechmatics.com) |
+| ![Gladia](https://img.shields.io/badge/Gladia-STT-6366F1?style=flat) | STT | Solid performance | [gladia.io](https://www.gladia.io) |
+| ![Lemonfox](https://img.shields.io/badge/Lemonfox-STT-FCD34D?style=flat) | STT | Budget-friendly | [lemonfox.ai](https://lemonfox.ai) |
+| ![Blabby](https://img.shields.io/badge/Blabby-STT-FF6B6B?style=flat) | STT | Browser-based | [blabby.co](https://blabby.co) |
+| ![ElevenLabs](https://img.shields.io/badge/ElevenLabs-TTS-000000?style=flat) | TTS | Premium quality | [elevenlabs.io](https://elevenlabs.io) |
+| ![Eden AI](https://img.shields.io/badge/Eden_AI-API_Hub-00D9FF?style=flat) | Aggregator | Multi-provider batching | [edenai.co](https://www.edenai.co) |
+
+### Generative AI Platforms
+
+| Platform | Description | Link |
+|----------|-------------|------|
+| ![Replicate](https://img.shields.io/badge/Replicate-Model_Marketplace-000000?style=flat) | Multi-modal generation | [replicate.com](https://replicate.com) |
+| ![Fal](https://img.shields.io/badge/Fal-Fast_Inference-FF4785?style=flat) | Fast inference platform | [fal.ai](https://fal.ai) |
+| ![Fireworks](https://img.shields.io/badge/Fireworks-Fast_API-FF5A1F?style=flat) | Fast inference API | [fireworks.ai](https://fireworks.ai) |
+
+### Data & Retrieval
+
+| Service | Type | Description | Link |
+|---------|------|-------------|------|
+| ![Firecrawl](https://img.shields.io/badge/Firecrawl-Web_Scraping-FF4500?style=flat) | Scraping | Web to markdown | [firecrawl.dev](https://www.firecrawl.dev) |
+| ![Ragie](https://img.shields.io/badge/Ragie-RAG-6366F1?style=flat) | RAG | RAG as a service | [ragie.ai](https://www.ragie.ai) |
+| ![Supermemory](https://img.shields.io/badge/Supermemory-RAG-9333EA?style=flat) | RAG | Managed RAG | [supermemory.ai](https://supermemory.ai) |
+| ![Pinecone](https://img.shields.io/badge/Pinecone-Vector_DB-000000?style=flat) | Vector DB | Vector database | [pinecone.io](https://www.pinecone.io) |
+| ![Qdrant](https://img.shields.io/badge/Qdrant-Vector_DB-DC244C?style=flat) | Vector DB | Vector search | [qdrant.tech](https://qdrant.tech) |
+| ![Mistral](https://img.shields.io/badge/Mistral-AI-FF6B6B?style=flat) | OCR | Document understanding | [mistral.ai](https://mistral.ai) |
+| ![LlamaIndex](https://img.shields.io/badge/LlamaIndex-Framework-9333EA?style=flat) | Framework | Document processing | [llamaindex.ai](https://www.llamaindex.ai) |
+
+### Cloud & Deployment
+
+| Platform | Description | Link |
+|----------|-------------|------|
+| ![GCP](https://img.shields.io/badge/Google_Cloud-Platform-4285F4?style=flat&logo=googlecloud) | Primary cloud | [cloud.google.com](https://cloud.google.com) |
+| ![Vercel](https://img.shields.io/badge/Vercel-Deployment-000000?style=flat&logo=vercel) | Serverless frontend | [vercel.com](https://vercel.com) |
+| ![Netlify](https://img.shields.io/badge/Netlify-Deployment-00C7B7?style=flat&logo=netlify) | (Previously used) | [netlify.com](https://www.netlify.com) |
+| ![RunPod](https://img.shields.io/badge/RunPod-GPU_Compute-6366F1?style=flat) | GPU on demand | [runpod.io](https://www.runpod.io) |
+| ![Modal](https://img.shields.io/badge/Modal-Serverless-000000?style=flat) | Serverless compute | [modal.com](https://modal.com) |
+| ![HF Spaces](https://img.shields.io/badge/Hugging_Face-Spaces-FFD21E?style=flat&logo=huggingface) | Rapid prototyping | [huggingface.co/spaces](https://huggingface.co/spaces) |
+
+### Local AI
+
+| Tool | Description | Link |
+|------|-------------|------|
+| ![LM Studio](https://img.shields.io/badge/LM_Studio-GUI-000000?style=flat) | Local model interface | [lmstudio.ai](https://lmstudio.ai) |
+| ![Ollama](https://img.shields.io/badge/Ollama-CLI-000000?style=flat) | Local inference CLI | [ollama.com](https://ollama.com) |
+| ![AMD Radeon](https://img.shields.io/badge/AMD-Radeon-ED1C24?style=flat&logo=amd) | GPU hardware | [amd.com/radeon-rx](https://www.amd.com/en/graphics/radeon-rx-graphics) |
+| ![ROCm](https://img.shields.io/badge/ROCm-Platform-ED1C24?style=flat&logo=amd) | AMD compute | [amd.com/rocm](https://www.amd.com/en/products/software/rocm.html) |
+| ![NVIDIA](https://img.shields.io/badge/NVIDIA-GPU-76B900?style=flat&logo=nvidia) | Recommended GPU | [nvidia.com](https://www.nvidia.com) |
+| ![Llama](https://img.shields.io/badge/Meta-Llama-0668E1?style=flat&logo=meta) | Open model family | [ai.meta.com/llama](https://ai.meta.com/llama/) |
+
+### Automation
+
+| Tool | Description | Link |
+|------|-------------|------|
+| ![n8n](https://img.shields.io/badge/n8n-Workflow_Automation-EA4B71?style=flat) | Visual automation | [n8n.io](https://n8n.io) |
+
+### Google Ecosystem
+
+| Service | Description | Link |
+|---------|-------------|------|
+| ![NotebookLM](https://img.shields.io/badge/NotebookLM-Research-4285F4?style=flat&logo=google) | Knowledge synthesis | [notebooklm.google.com](https://notebooklm.google.com) |
+| ![AI Studio](https://img.shields.io/badge/AI_Studio-Development-4285F4?style=flat&logo=google) | Development environment | [aistudio.google.com](https://aistudio.google.com) |
+| ![Cloud Run](https://img.shields.io/badge/Cloud_Run-Deployment-4285F4?style=flat&logo=googlecloud) | Serverless containers | [cloud.google.com/run](https://cloud.google.com/run) |
+
+### Self-Hosted & Open Source
+
+| Tool | Description | Link |
+|------|-------------|------|
+| ![Open WebUI](https://img.shields.io/badge/Open_WebUI-Self_Hosted-181717?style=flat&logo=github) | Self-hosted interface | [GitHub](https://github.com/open-webui/open-webui) |
+
+---
+
+**Last Updated**: October 27, 2025
+
 [claude]: https://claude.ai
 [claude-code]: https://docs.claude.com/claude-code
 [chatgpt]: https://chat.openai.com
 [openai]: https://openai.com
 [gemini]: https://gemini.google.com
 [openrouter]: https://openrouter.ai
-
-### Development Tools
 [codex]: https://github.com/features/copilot
 [aider]: https://aider.chat
 [github]: https://github.com
 [open-interpreter]: https://github.com/KillianLucas/open-interpreter
-
-### Model Context Protocol (MCP)
 [smithery]: https://smithery.ai
 [context-mcp]: https://github.com/modelcontextprotocol/servers
-
-### Speech & Voice
 [whisper]: https://openai.com/research/whisper
 [assemblyai]: https://www.assemblyai.com
 [deepgram]: https://deepgram.com
@@ -511,13 +679,9 @@ This AI stack reflects a few principles:
 [blabby]: https://blabby.co
 [elevenlabs]: https://elevenlabs.io
 [edenai]: https://www.edenai.co
-
-### Generative AI Platforms
 [replicate]: https://replicate.com
 [fal]: https://fal.ai
 [fireworks]: https://fireworks.ai
-
-### Data & Retrieval
 [firecrawl]: https://www.firecrawl.dev
 [ragie]: https://www.ragie.ai
 [supermemory]: https://supermemory.ai
@@ -525,34 +689,20 @@ This AI stack reflects a few principles:
 [qdrant]: https://qdrant.tech
 [mistral]: https://mistral.ai
 [llamaindex]: https://www.llamaindex.ai
-
-### Cloud & Deployment
 [gcp]: https://cloud.google.com
 [vercel]: https://vercel.com
 [netlify]: https://www.netlify.com
 [runpod]: https://www.runpod.io
 [modal]: https://modal.com
 [hf-spaces]: https://huggingface.co/spaces
-
-### Local AI
 [lmstudio]: https://lmstudio.ai
 [ollama]: https://ollama.com
 [amd-radeon]: https://www.amd.com/en/graphics/radeon-rx-graphics
 [rocm]: https://www.amd.com/en/products/software/rocm.html
 [nvidia]: https://www.nvidia.com
 [llama]: https://ai.meta.com/llama/
-
-### Automation
 [n8n]: https://n8n.io
-
-### Google Ecosystem
 [notebooklm]: https://notebooklm.google.com
 [ai-studio]: https://aistudio.google.com
 [cloud-run]: https://cloud.google.com/run
-
-### Self-Hosted & Open Source
 [open-webui]: https://github.com/open-webui/open-webui
-
----
-
-**Last Updated**: October 27, 2025
