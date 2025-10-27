@@ -10,17 +10,19 @@ A point-in-time overview of my AI infrastructure, tools, and services for develo
 
 ## Core Stack Components
 
-| Component | Primary Choice | Favorite Feature |
-|-----------|----------------|------------------|
-| **LLM Interface** | [Claude Code](https://docs.claude.com/claude-code) | CLI-based development |
-| **API Gateway** | [OpenRouter](https://openrouter.ai) | Unified API access |
-| **STT** | [AssemblyAI](https://www.assemblyai.com) | Speaker diarization |
-| **TTS** | [OpenAI](https://openai.com) | Cost-effective |
-| **Generative AI** | [Replicate](https://replicate.com) | Model exploration |
-| **RAG** | [Supermemory](https://supermemory.ai) | No DIY complexity |
-| **Research** | [NotebookLM](https://notebooklm.google.com) | Knowledge synthesis |
-| **Cloud** | [GCP](https://cloud.google.com) | Primary provider |
-| **Local AI** | [Ollama](https://ollama.com) | Batch processing |
+| Component | Primary Choice | Good Recs | Favorite Feature |
+|---|---|---|---|
+| **API Gateway** | [OpenRouter](https://openrouter.ai) | | Unified API access |
+| **Cloud** | [GCP](https://cloud.google.com) | | Primary provider |
+| **Generative AI** | [Replicate](https://replicate.com) | [Fal](https://fal.ai) | Model exploration |
+| **LLM Interface** | [Claude Code](https://docs.claude.com/claude-code) | | CLI-based development |
+| **Local AI** | [Ollama](https://ollama.com) | | Batch processing |
+| **Prototyping** | [AI Studio](https://aistudio.google.com) | | Development environment |
+| **RAG** | [Supermemory](https://supermemory.ai) | [Ragie](https://www.ragie.ai) | No DIY complexity |
+| **Research** | [NotebookLM](https://notebooklm.google.com) | | Knowledge synthesis |
+| **STT** | [AssemblyAI](https://www.assemblyai.com) | [Whisper](https://openai.com/research/whisper) | Speaker diarization |
+| **TTS** | [OpenAI](https://openai.com) | [ElevenLabs](https://elevenlabs.io) | Cost-effective |
+| **UI** | [ChatGPT](https://chat.openai.com) | | Day-to-day interface |
 
 ## Table of Contents
 
@@ -154,9 +156,9 @@ Having a mix of open-source and commercial models through one API is convenient 
     *   Essential for meeting transcripts and AI minute extraction
     *   Diarization is a foundational element for quality downstream processing
 *   [Deepgram](https://deepgram.com): Task-dependent usage
-*   [Speechmatics](https://www.speechmatics.com): Advanced voice technology platform
 *   [Gladia](https://www.gladia.io): Very solid performance
 *   [Lemonfox](https://lemonfox.ai): Budget-friendly option for cost-sensitive jobs
+*   [Speechmatics](https://www.speechmatics.com): Advanced voice technology platform
 
 **API Aggregators:**
 
@@ -203,8 +205,8 @@ Requires separate API subscriptions. Generally expensive but essential for live 
 
 **Primary Platforms:**
 
-*   [Replicate](https://replicate.com): Good for model exploration and API-based workflows
 *   [Fal](https://fal.ai): Similar offering, seems to have more Chinese models
+*   [Replicate](https://replicate.com): Good for model exploration and API-based workflows
 
 **Why These Are Useful**:
 
@@ -325,9 +327,9 @@ If I wrote notes a few years ago, I can use Firecrawl to pull them in. It's quic
 
 **Primary Tools:**
 
+*   [Aider](https://aider.chat) (AI pair programming)
 *   [Claude Code](https://docs.claude.com/claude-code) (CLI-based development)
 *   [Codex](https://github.com/features/copilot) (GitHub Copilot integration)
-*   [Aider](https://aider.chat) (AI pair programming)
 
 ### Code Hosting
 
@@ -351,8 +353,8 @@ If I wrote notes a few years ago, I can use Firecrawl to pull them in. It's quic
 
 ### Hardware On-Demand / Serverless
 
-*   [RunPod](https://www.runpod.io): GPU compute on demand
 *   [Modal](https://modal.com): Serverless compute platform
+*   [RunPod](https://www.runpod.io): GPU compute on demand
 
 ### Prototyping & Lightweight Execution
 
@@ -368,11 +370,11 @@ If I wrote notes a few years ago, I can use Firecrawl to pull them in. It's quic
 
 **Multi-Model Platforms:**
 
-*   [OpenRouter](https://openrouter.ai) (unified API access)
 *   [Fal](https://fal.ai) (fast inference)
-*   [Replicate](https://replicate.com) (model marketplace)
 *   [Fireworks](https://fireworks.ai) (fast inference)
 *   Individual vendor APIs
+*   [OpenRouter](https://openrouter.ai) (unified API access)
+*   [Replicate](https://replicate.com) (model marketplace)
 
 ---
 
@@ -464,10 +466,10 @@ This document itself was created using this pattern:
 
 **Integrated Services:**
 
-*   [NotebookLM](https://notebooklm.google.com): Free with Google Workspace - **Favorite tool** for research and knowledge synthesis
-*   [Gemini](https://gemini.google.com): Free with Google Workspace
 *   [AI Studio](https://aistudio.google.com): Development environment
 *   [AI Studio](https://aistudio.google.com) + [Cloud Run](https://cloud.google.com/run): Production deployments (API costs apply)
+*   [Gemini](https://gemini.google.com): Free with Google Workspace
+*   [NotebookLM](https://notebooklm.google.com): Free with Google Workspace - **Favorite tool** for research and knowledge synthesis
 
 ### NotebookLM
 
@@ -582,70 +584,70 @@ This AI stack reflects a few principles:
 
 ### Core AI Platforms
 
+*   [ChatGPT](https://chat.openai.com) - Day-to-day LLM interface
 *   [Claude](https://claude.ai) - Primary LLM interface
 *   [Claude Code](https://docs.claude.com/claude-code) - CLI development tool
-*   [ChatGPT](https://chat.openai.com) - Day-to-day LLM interface
-*   [OpenAI](https://openai.com) - LLM API access
 *   [Gemini](https://gemini.google.com) - Google's LLM platform
+*   [OpenAI](https://openai.com) - LLM API access
 *   [OpenRouter](https://openrouter.ai) - Unified multi-model API
 
 ### Development Tools
 
-*   [GitHub Copilot](https://github.com/features/copilot) - Code completion
 *   [Aider](https://aider.chat) - AI pair programming
 *   [GitHub](https://github.com) - Code hosting
+*   [GitHub Copilot](https://github.com/features/copilot) - Code completion
 *   [Open Interpreter](https://github.com/KillianLucas/open-interpreter) - Natural language interface
 
 ### Model Context Protocol (MCP)
 
-*   [Smithery](https://smithery.ai) - MCP marketplace
 *   [MCP Servers](https://github.com/modelcontextprotocol/servers) - Official MCP servers
+*   [Smithery](https://smithery.ai) - MCP marketplace
 
 ### Speech & Voice
 
-*   [Whisper](https://openai.com/research/whisper) - Baseline transcription
 *   [AssemblyAI](https://www.assemblyai.com) - Long-form with diarization
+*   [Blabby](https://blabby.co) - Browser-based
 *   [Deepgram](https://deepgram.com) - Task-dependent
-*   [Speechmatics](https://www.speechmatics.com) - Advanced voice platform
+*   [Eden AI](https://www.edenai.co) - Multi-provider batching
+*   [ElevenLabs](https://elevenlabs.io) - Premium quality TTS
 *   [Gladia](https://www.gladia.io) - Solid performance
 *   [Lemonfox](https://lemonfox.ai) - Budget-friendly
-*   [Blabby](https://blabby.co) - Browser-based
-*   [ElevenLabs](https://elevenlabs.io) - Premium quality TTS
-*   [Eden AI](https://www.edenai.co) - Multi-provider batching
+*   [Speechmatics](https://www.speechmatics.com) - Advanced voice platform
+*   [Whisper](https://openai.com/research/whisper) - Baseline transcription
 
 ### Generative AI Platforms
 
-*   [Replicate](https://replicate.com) - Multi-modal generation
 *   [Fal](https://fal.ai) - Fast inference platform
 *   [Fireworks](https://fireworks.ai) - Fast inference API
+*   [Replicate](https://replicate.com) - Multi-modal generation
 
 ### Data & Retrieval
 
 *   [Firecrawl](https://www.firecrawl.dev) - Web to markdown
-*   [Ragie](https://www.ragie.ai) - RAG as a service
-*   [Supermemory](https://supermemory.ai) - Managed RAG
+*   [LlamaIndex](https://www.llamaindex.ai) - Document processing
+*   [Mistral](https://mistral.ai) - Document understanding
 *   [Pinecone](https://www.pinecone.io) - Vector database
 *   [Qdrant](https://qdrant.tech) - Vector search
-*   [Mistral](https://mistral.ai) - Document understanding
-*   [LlamaIndex](https://www.llamaindex.ai) - Document processing
+*   [Ragie](https://www.ragie.ai) - RAG as a service
+*   [Supermemory](https://supermemory.ai) - Managed RAG
 
 ### Cloud & Deployment
 
 *   [Google Cloud Platform](https://cloud.google.com) - Primary cloud
-*   [Vercel](https://vercel.com) - Serverless frontend
+*   [Hugging Face Spaces](https://huggingface.co/spaces) - Rapid prototyping
+*   [Modal](https://modal.com) - Serverless compute
 *   [Netlify](https://www.netlify.com) - (Previously used)
 *   [RunPod](https://www.runpod.io) - GPU on demand
-*   [Modal](https://modal.com) - Serverless compute
-*   [Hugging Face Spaces](https://huggingface.co/spaces) - Rapid prototyping
+*   [Vercel](https://vercel.com) - Serverless frontend
 
 ### Local AI
 
-*   [LM Studio](https://lmstudio.ai) - Local model interface
-*   [Ollama](https://ollama.com) - Local inference CLI
 *   [AMD Radeon](https://www.amd.com/en/graphics/radeon-rx-graphics) - GPU hardware
-*   [ROCm](https://www.amd.com/en/products/software/rocm.html) - AMD compute
-*   [NVIDIA](https://www.nvidia.com) - Recommended GPU
+*   [LM Studio](https://lmstudio.ai) - Local model interface
 *   [Meta Llama](https://ai.meta.com/llama/) - Open model family
+*   [NVIDIA](https://www.nvidia.com) - Recommended GPU
+*   [Ollama](https://ollama.com) - Local inference CLI
+*   [ROCm](https://www.amd.com/en/products/software/rocm.html) - AMD compute
 
 ### Automation
 
@@ -653,9 +655,9 @@ This AI stack reflects a few principles:
 
 ### Google Ecosystem
 
-*   [NotebookLM](https://notebooklm.google.com) - Knowledge synthesis
 *   [AI Studio](https://aistudio.google.com) - Development environment
 *   [Cloud Run](https://cloud.google.com/run) - Serverless containers
+*   [NotebookLM](https://notebooklm.google.com) - Knowledge synthesis
 
 ### Self-Hosted & Open Source
 
