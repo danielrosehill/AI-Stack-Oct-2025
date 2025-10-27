@@ -1,0 +1,979 @@
+{
+  "metadata": {
+    "title": "AI Stack - October 2025",
+    "date": "2025-10-27",
+    "author": "Daniel Rosehill",
+    "description": "A point-in-time overview of my AI infrastructure, tools, and services for development, deployment, and production workflows.",
+    "disclaimer": "This is not prescriptive. It's a snapshot of what I, as one person, see value in and my thoughts. Everybody is different."
+  },
+  "core_stack_summary": [
+    {
+      "component": "API Gateway",
+      "primary_choice": "OpenRouter",
+      "alternatives": [],
+      "url": "https://openrouter.ai",
+      "favorite_feature": "Unified API access"
+    },
+    {
+      "component": "Cloud",
+      "primary_choice": "GCP",
+      "alternatives": [],
+      "url": "https://cloud.google.com",
+      "favorite_feature": "Primary provider"
+    },
+    {
+      "component": "Generative AI",
+      "primary_choice": "Replicate",
+      "alternatives": ["Fal"],
+      "url": "https://replicate.com",
+      "favorite_feature": "Model exploration"
+    },
+    {
+      "component": "LLM Interface",
+      "primary_choice": "Claude Code",
+      "alternatives": [],
+      "url": "https://docs.claude.com/claude-code",
+      "favorite_feature": "CLI-based development"
+    },
+    {
+      "component": "Local AI",
+      "primary_choice": "Ollama",
+      "alternatives": [],
+      "url": "https://ollama.com",
+      "favorite_feature": "Batch processing"
+    },
+    {
+      "component": "Prototyping",
+      "primary_choice": "AI Studio",
+      "alternatives": [],
+      "url": "https://aistudio.google.com",
+      "favorite_feature": "Development environment"
+    },
+    {
+      "component": "RAG",
+      "primary_choice": "Supermemory",
+      "alternatives": ["Ragie"],
+      "url": "https://supermemory.ai",
+      "favorite_feature": "No DIY complexity"
+    },
+    {
+      "component": "Research",
+      "primary_choice": "NotebookLM",
+      "alternatives": [],
+      "url": "https://notebooklm.google.com",
+      "favorite_feature": "Knowledge synthesis"
+    },
+    {
+      "component": "STT",
+      "primary_choice": "AssemblyAI",
+      "alternatives": ["Whisper"],
+      "url": "https://www.assemblyai.com",
+      "favorite_feature": "Speaker diarization"
+    },
+    {
+      "component": "TTS",
+      "primary_choice": "OpenAI",
+      "alternatives": ["ElevenLabs"],
+      "url": "https://openai.com",
+      "favorite_feature": "Cost-effective"
+    },
+    {
+      "component": "UI",
+      "primary_choice": "ChatGPT",
+      "alternatives": [],
+      "url": "https://chat.openai.com",
+      "favorite_feature": "Day-to-day interface"
+    }
+  ],
+  "categories": {
+    "core_infrastructure": {
+      "description": "The backbone of the entire AI stack, powering nearly every component and workflow",
+      "large_language_models": {
+        "primary_interfaces": [
+          {
+            "name": "Claude Code",
+            "type": "CLI",
+            "url": "https://docs.claude.com/claude-code",
+            "pricing": {
+              "pro": "$17/month",
+              "max": "$100/month"
+            },
+            "use_cases": [
+              "Local system administration",
+              "Home lab management",
+              "Remote server fixes",
+              "Solving Linux issues"
+            ],
+            "notes": "After 20 years of using Linux, CLIs are familiar, but I've generally preferred GUIs when they're available. Claude Code has changed how I approach system management. The list of things that don't quite work is now much shorter."
+          },
+          {
+            "name": "Claude",
+            "type": "GUI",
+            "url": "https://claude.ai",
+            "pricing": "Included with Claude Code subscription",
+            "notes": "GUI interface included with Claude Code subscription"
+          },
+          {
+            "name": "ChatGPT",
+            "type": "GUI",
+            "url": "https://chat.openai.com",
+            "use_cases": ["Day-to-day interface for general tasks"]
+          },
+          {
+            "name": "OpenAI",
+            "type": "API",
+            "url": "https://openai.com",
+            "use_cases": ["API access and integrations"]
+          }
+        ],
+        "api_access": {
+          "primary": {
+            "name": "OpenRouter",
+            "url": "https://openrouter.ai",
+            "description": "Unified API gateway for multiple LLM providers",
+            "reasons": [
+              "Expense Consolidation: One API bill is easier than fragmented charges",
+              "Model Exploration: Try different models without separate accounts"
+            ],
+            "use_cases": [
+              "Running evaluations across multiple models",
+              "Text transformation tasks",
+              "Instruction-following workloads"
+            ],
+            "performance_note": "For Claude specifically, better performance may come from Anthropic directly rather than routing through OpenRouter",
+            "getting_started": "Set up an account on OpenRouter. They offer some free inference to try it out."
+          },
+          "alternatives": [
+            {
+              "description": "Direct vendor APIs",
+              "note": "Available from all major providers. First-party vendor access may provide better inference quality."
+            }
+          ],
+          "beyond_big_names": {
+            "description": "Models worth exploring beyond OpenAI, Anthropic, Gemini",
+            "examples": [
+              "Chinese models",
+              "Frontier fine-tunable models",
+              "IBM Granite",
+              "Amazon's models",
+              "Microsoft Phi"
+            ],
+            "value_proposition": "Many practical uses for LLMs are simple text transformations. For those, you don't need a high-reasoning model. You want something good at instruction following."
+          }
+        },
+        "model_context_protocol": {
+          "marketplaces": [
+            {
+              "name": "Smithery",
+              "url": "https://smithery.ai"
+            },
+            {
+              "name": "GitHub MCP Servers",
+              "url": "https://github.com/modelcontextprotocol/servers"
+            }
+          ],
+          "useful_mcps": [
+            {
+              "name": "Cloudflare MCP",
+              "url": "https://github.com/cloudflare/mcp-server-cloudflare",
+              "description": "Manage Cloudflare resources and configurations"
+            },
+            {
+              "name": "Vercel MCP",
+              "url": "https://github.com/vercel/mcp-server-vercel",
+              "description": "Deploy and manage Vercel projects"
+            },
+            {
+              "name": "Context7",
+              "url": "https://context7.com",
+              "description": "Particularly useful MCP for enhanced context management"
+            },
+            {
+              "name": "GitHub MCP",
+              "url": "https://github.com/github/mcp-server-github",
+              "description": "Enhanced GitHub integration and repository management"
+            },
+            {
+              "name": "Goose",
+              "url": "https://github.com/block/goose",
+              "description": "Valuable MCP tool for development workflows"
+            },
+            {
+              "name": "Firecrawl",
+              "url": "https://www.firecrawl.dev",
+              "description": "Covered in Data Retrieval section"
+            }
+          ]
+        },
+        "vendor_clis": {
+          "description": "Various vendor CLIs provide valuable direct command-line access to their respective models",
+          "examples": ["Gemini CLI", "Claude CLI", "OpenAI CLI", "Qwen CLI"],
+          "use_cases": [
+            "Quick API testing and experimentation",
+            "Scripting and automation workflows",
+            "CI/CD pipeline integration",
+            "Direct model access without abstraction layers"
+          ]
+        },
+        "self_hosted_note": {
+          "previous_tool": "Open WebUI",
+          "url": "https://github.com/open-webui/open-webui",
+          "decision": "Before becoming a father and getting busy, I reached the conclusion that there wasn't a compelling reason to deal with the hassle of things breaking and needing fixes. Simplicity and reliability won out over self-hosting."
+        }
+      }
+    },
+    "voice_applications": {
+      "description": "Speech-to-text and text-to-speech services for various use cases",
+      "speech_to_text": {
+        "primary_services": [
+          {
+            "name": "Whisper",
+            "provider": "OpenAI",
+            "url": "https://openai.com/research/whisper",
+            "type": "API",
+            "description": "Solid baseline, good value",
+            "note": "OpenAI's newer model hasn't shown significant improvement in my workloads"
+          },
+          {
+            "name": "Browser-based tools",
+            "example": "Blabby",
+            "url": "https://blabby.co",
+            "description": "Convenient for quick tasks"
+          },
+          {
+            "name": "OS-level integration tools",
+            "description": "For continuous dictation"
+          }
+        ],
+        "mobile_android": [
+          {
+            "name": "Futo Keyboard",
+            "url": "https://keyboard.futo.org",
+            "description": "Voice typing and ASR on Android",
+            "features": [
+              "Privacy-focused keyboard with local speech recognition",
+              "No cloud processing for voice input",
+              "Good accuracy for on-device processing"
+            ]
+          }
+        ],
+        "specialized_services": [
+          {
+            "name": "AssemblyAI",
+            "url": "https://www.assemblyai.com",
+            "use_case": "Long-form transcription with speaker diarization",
+            "frequency": "Used frequently",
+            "value": "Essential for meeting transcripts and AI minute extraction. Diarization is a foundational element for quality downstream processing."
+          },
+          {
+            "name": "Deepgram",
+            "url": "https://deepgram.com",
+            "use_case": "Task-dependent usage"
+          },
+          {
+            "name": "Gladia",
+            "url": "https://www.gladia.io",
+            "description": "Very solid performance"
+          },
+          {
+            "name": "Lemonfox",
+            "url": "https://lemonfox.ai",
+            "description": "Budget-friendly option for cost-sensitive jobs"
+          },
+          {
+            "name": "Speechmatics",
+            "url": "https://www.speechmatics.com",
+            "description": "Advanced voice technology platform"
+          }
+        ],
+        "api_aggregators": [
+          {
+            "name": "Eden AI",
+            "url": "https://www.edenai.co",
+            "description": "Multi-provider API batching and management"
+          }
+        ],
+        "critical_learning": "Don't expect the STT tool you use for live transcription to work well for asynchronous jobs like meeting transcripts. There are significant performance differences within STT tools across synchronous vs. asynchronous workloads. Match the tool to the specific task requirements.",
+        "use_case_recommendations": {
+          "live_realtime": ["Whisper", "browser tools", "OS integration"],
+          "async_longform_with_speakers": ["AssemblyAI", "Speechmatics"],
+          "budget_conscious_batch": ["Lemonfox"],
+          "general_reliability": ["Gladia"]
+        }
+      },
+      "text_to_speech": {
+        "premium_option": {
+          "name": "ElevenLabs",
+          "url": "https://elevenlabs.io",
+          "description": "Best-in-class quality with excellent expressiveness",
+          "drawback": "Very expensive",
+          "recommendation": "Use when audio quality is critical"
+        },
+        "budget_friendly_options": [
+          {
+            "name": "OpenAI TTS",
+            "url": "https://openai.com",
+            "description": "Good enough for majority of use cases",
+            "note": "Lacks the expressiveness of ElevenLabs but significantly cheaper. Recommended for most projects unless premium audio is essential."
+          },
+          {
+            "name": "Various alternative providers",
+            "description": "Available based on specific needs"
+          }
+        ],
+        "budget_decision_framework": {
+          "quality_first": "ElevenLabs",
+          "cost_conscious": "OpenAI TTS or OpenAI Mini"
+        }
+      },
+      "realtime_live_audio": {
+        "description": "Requires separate API subscriptions. Generally expensive but essential for live interaction use cases."
+      }
+    },
+    "generative_ai": {
+      "description": "Multi-modal generation platforms for image, video, and other content creation",
+      "multi_modal_platforms": {
+        "primary": [
+          {
+            "name": "Replicate",
+            "url": "https://replicate.com",
+            "description": "Good for model exploration and API-based workflows",
+            "collections": {
+              "text_to_image": "https://replicate.com/collections/text-to-image",
+              "image_editing": "https://replicate.com/collections/image-editing",
+              "text_to_video": "https://replicate.com/collections/text-to-video",
+              "all_collections": "https://replicate.com/collections"
+            }
+          },
+          {
+            "name": "Fal",
+            "url": "https://fal.ai",
+            "description": "Similar offering, seems to have more Chinese models"
+          }
+        ],
+        "value_proposition": "Both platforms offer the same value as OpenRouter but for generative AI. The discovery aspect is as useful as the consolidation - you can explore available models in one place, find capabilities you didn't know existed, and try out models before committing budget.",
+        "comparison": "I don't have strong opinions about which is better. Fal seems to have more Chinese models. Both work well."
+      },
+      "image_generation": {
+        "capabilities": [
+          "Text-to-image generation",
+          "Image-to-image transformation",
+          "Image inpainting and editing"
+        ],
+        "platforms": ["Replicate", "Fal", "Direct model APIs"],
+        "noteworthy_models": [
+          {
+            "name": "Nano Banana",
+            "url": "https://replicate.com/google/nano-banana",
+            "provider": "Google",
+            "description": "Image-to-image model",
+            "features": [
+              "Fast, efficient transformations",
+              "Good for style transfer and variations"
+            ]
+          }
+        ]
+      },
+      "video_generation": {
+        "capabilities": [
+          "Image-to-video conversion",
+          "Text-to-video creation"
+        ],
+        "platforms": ["Replicate", "Fal"],
+        "noteworthy_models": [
+          {
+            "name": "Wan Video 2.5 I2V Fast",
+            "url": "https://replicate.com/wan-video/wan-2.5-i2v-fast",
+            "description": "Budget-friendly image-to-video",
+            "features": [
+              "Cost-effective for experimental video generation",
+              "Good balance of speed and quality"
+            ]
+          }
+        ]
+      },
+      "multimodal_inference": {
+        "image_based": {
+          "description": "Vision LLMs",
+          "availability": "Available across most modern LLMs"
+        },
+        "video_based": {
+          "primary_choice": "Gemini",
+          "description": "Primary choice for video understanding"
+        },
+        "audio_based": {
+          "primary_choice": "Gemini 2.5",
+          "note": "Enormous transformative potential beyond simple STT. Audio-based inference represents a significant opportunity for innovation beyond traditional speech-to-text approaches."
+        }
+      }
+    },
+    "data_retrieval_processing": {
+      "description": "Tools for working with internal and external data, RAG, and document processing",
+      "internal_data_rag": {
+        "description": "Retrieval-Augmented Generation for working with proprietary datasets and knowledge bases",
+        "rag_as_a_service": [
+          {
+            "name": "Ragie",
+            "url": "https://www.ragie.ai",
+            "description": "RAG as a service via API"
+          },
+          {
+            "name": "Supermemory",
+            "url": "https://supermemory.ai",
+            "philosophy": "Don't build your own RAG pipeline"
+          }
+        ],
+        "why_not_diy": "Unless you have enterprise-level document stores, building RAG from scratch (Pinecone, Qdrant, custom embeddings, chunking strategies, vector sizes) is often time-consuming. Services like Supermemory and memory layer tools handle this complexity, letting you focus on grounding AI in documents rather than becoming a retrieval engineer.",
+        "note": "For most use cases not at massive scale, managed RAG services save setup time for relatively simple document retrieval tasks.",
+        "diy_components": [
+          {
+            "name": "Pinecone",
+            "url": "https://www.pinecone.io",
+            "type": "Vector database"
+          },
+          {
+            "name": "Qdrant",
+            "url": "https://qdrant.tech",
+            "type": "Vector search"
+          }
+        ]
+      },
+      "external_data": {
+        "primary_tool": {
+          "name": "Firecrawl",
+          "url": "https://www.firecrawl.dev",
+          "description": "Web scraping and data extraction",
+          "why_useful": "Markdown is a useful format for AI workloads. Being able to quickly convert web content to markdown helps when you need to provide API docs or other context to AI.",
+          "features": [
+            "Model definitions for targeted extraction",
+            "MCP integration",
+            "Web to markdown conversion"
+          ],
+          "use_cases": [
+            "Pulling your own historical content",
+            "API documentation lookup via MCP",
+            "Converting web content to AI-friendly formats",
+            "Retrieving notes from various platforms"
+          ],
+          "real_use_case": "If I wrote notes a few years ago, I can use Firecrawl to pull them in. It's quicker than digging through old Google Drive folders and formatting to Markdown.",
+          "note": "People assume scraping is spammy or questionable, but I've often used these tools to scrape my own content."
+        },
+        "alternatives": [
+          {
+            "name": "Context",
+            "description": "Good MCP for web to markdown conversion"
+          }
+        ]
+      },
+      "document_processing_ocr": [
+        {
+          "name": "Mistral",
+          "url": "https://mistral.ai",
+          "capability": "Document understanding"
+        },
+        {
+          "name": "LlamaIndex",
+          "url": "https://www.llamaindex.ai",
+          "capability": "Document processing and indexing"
+        }
+      ]
+    },
+    "development_tools": {
+      "description": "Tools for code generation, editing, and development workflows",
+      "code_generation_editing": {
+        "primary_tools": [
+          {
+            "name": "Aider",
+            "url": "https://aider.chat",
+            "description": "AI pair programming"
+          },
+          {
+            "name": "Claude Code",
+            "url": "https://docs.claude.com/claude-code",
+            "description": "CLI-based development"
+          },
+          {
+            "name": "Codex",
+            "url": "https://github.com/features/copilot",
+            "description": "GitHub Copilot integration"
+          }
+        ],
+        "vendor_clis": {
+          "description": "Various vendor CLIs provide valuable direct command-line access",
+          "examples": ["Gemini CLI", "Claude CLI", "OpenAI CLI", "Qwen CLI"],
+          "use_cases": [
+            "Quick API testing and experimentation",
+            "Scripting and automation workflows",
+            "CI/CD pipeline integration",
+            "Direct model access without abstraction layers"
+          ]
+        }
+      },
+      "ides_editors": [
+        {
+          "name": "VS Code",
+          "url": "https://code.visualstudio.com",
+          "description": "Primary IDE for development work",
+          "features": [
+            "Extensive extension ecosystem",
+            "Excellent AI integration support",
+            "Strong debugging and Git integration"
+          ]
+        }
+      ],
+      "note_taking_knowledge_management": [
+        {
+          "name": "Obsidian",
+          "url": "https://obsidian.md",
+          "description": "Primary tool for note capture and knowledge management",
+          "features": [
+            "Local-first, markdown-based note-taking",
+            "Excellent for organizing AI outputs and research",
+            "Graph view for connecting ideas",
+            "Extensible with plugins"
+          ],
+          "note": "Output management and storage remains an oddly underaddressed part of the AI universe. Most tools focus on generation, but systematic capture, organization, and retrieval of AI outputs is still largely an afterthought. Having a solid knowledge management system like Obsidian helps bridge this gap."
+        }
+      ],
+      "python_environment_management": [
+        {
+          "name": "Conda",
+          "url": "https://docs.conda.io",
+          "description": "Managing complex Python environments with system dependencies",
+          "use_cases": [
+            "Excellent for ML/AI projects with specific library requirements",
+            "Handles non-Python dependencies well"
+          ]
+        },
+        {
+          "name": "UV",
+          "url": "https://github.com/astral-sh/uv",
+          "description": "Modern, fast Python package installer and resolver",
+          "features": [
+            "Extremely fast for creating lightweight virtual environments",
+            "Great for quick projects and scripts",
+            "Rust-based performance benefits"
+          ]
+        }
+      ],
+      "containerization": [
+        {
+          "name": "Docker",
+          "url": "https://www.docker.com",
+          "description": "Essential for containerized development, especially for local workloads",
+          "use_cases": [
+            "Isolating dependencies",
+            "Creating reproducible development environments",
+            "Testing deployment configurations locally",
+            "Running services and databases for development"
+          ]
+        }
+      ],
+      "code_hosting": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com",
+          "description": "Primary repository hosting"
+        }
+      ]
+    },
+    "cloud_deployment": {
+      "description": "Cloud infrastructure, deployment platforms, and hosting services",
+      "cloud_infrastructure": [
+        {
+          "name": "Google Cloud Platform (GCP)",
+          "url": "https://cloud.google.com",
+          "description": "Primary cloud provider"
+        }
+      ],
+      "deployment_platforms": [
+        {
+          "name": "On-server",
+          "description": "Self-hosted deployments"
+        },
+        {
+          "name": "Vercel",
+          "url": "https://vercel.com",
+          "description": "Serverless frontend deployments",
+          "migration": "Recently migrated from Netlify",
+          "reasons": [
+            "More AI-forward feature set",
+            "Environment variable sharing across projects is excellent"
+          ]
+        }
+      ],
+      "hardware_on_demand": [
+        {
+          "name": "Modal",
+          "url": "https://modal.com",
+          "description": "Serverless compute platform"
+        },
+        {
+          "name": "RunPod",
+          "url": "https://www.runpod.io",
+          "description": "GPU compute on demand"
+        }
+      ],
+      "prototyping": [
+        {
+          "name": "Hugging Face Spaces",
+          "url": "https://huggingface.co/spaces",
+          "description": "Rapid prototyping and lightweight app hosting",
+          "features": [
+            "Supports private deployments",
+            "Excellent for quick experiments"
+          ]
+        }
+      ],
+      "media_storage": [
+        {
+          "name": "Cloudinary",
+          "url": "https://cloudinary.com",
+          "description": "AI-friendly media storage and transformation",
+          "features": [
+            "Optimized for AI-generated images and media assets",
+            "Automatic optimization and transformation APIs",
+            "CDN delivery for fast access",
+            "Good integration with generative AI workflows"
+          ]
+        }
+      ],
+      "previous_platforms": [
+        {
+          "name": "Netlify",
+          "url": "https://www.netlify.com",
+          "status": "Previously used, migrated to Vercel"
+        }
+      ]
+    },
+    "api_services": {
+      "description": "Versatile AI API platforms and services",
+      "multi_model_platforms": [
+        {
+          "name": "OpenRouter",
+          "url": "https://openrouter.ai",
+          "description": "Unified API access"
+        },
+        {
+          "name": "Replicate",
+          "url": "https://replicate.com",
+          "description": "Model marketplace"
+        },
+        {
+          "name": "Fal",
+          "url": "https://fal.ai",
+          "description": "Fast inference"
+        },
+        {
+          "name": "Fireworks",
+          "url": "https://fireworks.ai",
+          "description": "Fast inference"
+        },
+        {
+          "name": "Individual vendor APIs",
+          "description": "Direct access to specific providers"
+        }
+      ]
+    },
+    "local_ai": {
+      "description": "Local AI infrastructure including software and hardware",
+      "software_stack": [
+        {
+          "name": "LM Studio",
+          "url": "https://lmstudio.ai",
+          "description": "GUI interface for local models",
+          "features": [
+            "User-friendly interface for model management",
+            "Good for experimenting with different models",
+            "Supports multiple model formats"
+          ]
+        },
+        {
+          "name": "Ollama",
+          "url": "https://ollama.com",
+          "description": "CLI-based local inference",
+          "preference": "Preferred for batch processing and automation",
+          "features": [
+            "Efficient model management",
+            "Easy integration with scripts and workflows"
+          ]
+        },
+        {
+          "name": "ComfyUI",
+          "url": "https://github.com/comfyanonymous/ComfyUI",
+          "description": "Node-based interface for Stable Diffusion",
+          "features": [
+            "Workflow-driven image generation",
+            "Powerful for complex generation pipelines",
+            "Good for iterative experimentation"
+          ]
+        },
+        {
+          "name": "rmbg",
+          "url": "https://github.com/zhbhun/rmbg",
+          "description": "Background removal tool",
+          "features": [
+            "Local background removal",
+            "Fast and efficient processing"
+          ]
+        }
+      ],
+      "hardware": {
+        "current": {
+          "type": "AMD Radeon (ROCm-compatible)",
+          "url": "https://www.amd.com/en/graphics/radeon-rx-graphics",
+          "rocm_url": "https://www.amd.com/en/products/software/rocm.html"
+        },
+        "recommendation": {
+          "type": "NVIDIA GPU",
+          "url": "https://www.nvidia.com",
+          "reasons": [
+            "Fewer compatibility issues",
+            "AMD works but adds complexity",
+            "NVIDIA has broader model support and easier setup"
+          ]
+        }
+      },
+      "current_status": {
+        "why_use_local": {
+          "not_for": ["Privacy (not a driving factor)", "Cost savings (cloud inference offers excellent value)"],
+          "primary_reason": "Speed for specific workloads"
+        },
+        "where_works_well": {
+          "use_case": "Large batch jobs",
+          "description": "Processing thousands of files (e.g., voice note classification)",
+          "benefits": [
+            "No rate limiting concerns",
+            "Can run overnight",
+            "Models like Meta Llama 3.1 for text transformation tasks"
+          ]
+        },
+        "where_falls_short": [
+          "Agentic workflows: Local agents (Qwen models, GLM 4.6) haven't matched cloud quality",
+          "Code generation: Local models not yet competitive with cloud options",
+          "Image generation: Cloud services remain more practical"
+        ],
+        "honest_assessment": "I keep exploring local AI and am eager for it to improve, but currently find myself defaulting to cloud services for most tasks. The quality gap hasn't closed enough to justify the added complexity, except for specific batch processing scenarios."
+      },
+      "security_sensitive": {
+        "offline_ai": {
+          "description": "Local models and interfaces for sensitive workloads",
+          "note": "No external API calls"
+        },
+        "air_gapped": {
+          "description": "Adapted local AI stack for completely isolated systems",
+          "note": "Separate infrastructure domain"
+        }
+      }
+    },
+    "automation_workflows": {
+      "description": "Tools and patterns for automating AI workflows",
+      "automation_pipelines": [
+        {
+          "name": "N8N",
+          "url": "https://n8n.io",
+          "description": "Visual workflow automation"
+        }
+      ],
+      "voice_first_workflows": {
+        "description": "A significant pattern in the stack is voice-based context generation and documentation",
+        "why_matters": {
+          "efficiency": "30-minute voice recording captures more information than hours of typing",
+          "natural_expression": "Speaking allows more natural, comprehensive context sharing",
+          "transformation_pipeline": "Voice -> STT -> Context extraction -> AI workspace"
+        },
+        "current_project": "Working on automated classification system for voice notes using batch processing with local models",
+        "meta_workflow": {
+          "description": "This document itself was created using this pattern",
+          "steps": [
+            "Claude Code generated interview questions",
+            "Recorded 30-minute voice response",
+            "Transcribed and integrated into documentation"
+          ]
+        },
+        "advantage": "Voice workflows excel at generating rich, personalized context that makes AI significantly more useful for ongoing tasks"
+      }
+    },
+    "google_ecosystem": {
+      "description": "Integrated Google services for AI development and research",
+      "integrated_services": [
+        {
+          "name": "AI Studio",
+          "url": "https://aistudio.google.com",
+          "description": "Development environment"
+        },
+        {
+          "name": "AI Studio + Cloud Run",
+          "description": "Production deployments (API costs apply)",
+          "note": "Combination for production use"
+        },
+        {
+          "name": "Gemini",
+          "url": "https://gemini.google.com",
+          "pricing": "Free with Google Workspace"
+        },
+        {
+          "name": "NotebookLM",
+          "url": "https://notebooklm.google.com",
+          "pricing": "Free with Google Workspace",
+          "status": "Favorite tool for research and knowledge synthesis"
+        }
+      ],
+      "notebooklm_deep_dive": {
+        "why_use": [
+          "Originally limited to 10 sources; now more capable",
+          "Good at assembling building blocks: retrieval -> questions -> generation based on retrieval",
+          "Alternative to LlamaIndex for many use cases, but simpler"
+        ],
+        "deliberate_context_generation": {
+          "description": "Pattern for building context once rather than repeatedly",
+          "when_useful": "When you have an ongoing situation that's personal and complex - not just asking for a pasta recipe",
+          "real_example": {
+            "scenario": "Home Lab Infrastructure",
+            "problem": "Managing a home lab with multiple servers, network configurations, hardware specs, and custom setups. Tedious to re-explain entire infrastructure every time you need help.",
+            "approach": [
+              "Record the context once (30-minute voice note covering network topology, hardware specs, software stack, configuration decisions)",
+              "Transform to text",
+              "Use as workspace foundation in NotebookLM",
+              "Get troubleshooting help, upgrade recommendations, configuration suggestions - without re-explaining setup"
+            ]
+          },
+          "why_helps": "When you're working on a few of these ongoing situations (home lab infrastructure, project architecture, complex workflows), you see the advantage of this approach over repeatedly defining context",
+          "two_approaches": {
+            "openai_approach": "Chat first, AI extracts memories over time",
+            "this_approach": "Generate deliberate context upfront through structured recording"
+          },
+          "both_solving": "How can AI be more useful when personalized to your life circumstances?",
+          "why_voice": "I can record a voice note and in 30 minutes gather a lot of information. Transform that (extracting the context data), and that's the starting context.",
+          "variations": [
+            "Basic: Speak for 30 minutes into a microphone",
+            "Structured: A bot asks questions like an interview (used for this stack documentation)"
+          ],
+          "note": "This pattern creates comprehensive context in a single focused session rather than hoping it emerges from conversation"
+        }
+      }
+    },
+    "honorable_mentions": {
+      "description": "Tools worth mentioning that don't fit main categories",
+      "privacy_first_ai": [
+        {
+          "name": "Lumo",
+          "provider": "Proton",
+          "url": "https://proton.me/ai",
+          "description": "Privacy-focused AI assistant",
+          "features": [
+            "Built by Proton with strong privacy guarantees",
+            "Good option for users already in the Proton ecosystem",
+            "Emphasis on data protection and user privacy"
+          ]
+        },
+        {
+          "name": "Venice.ai",
+          "url": "https://venice.ai",
+          "description": "Privacy-first AI platform",
+          "features": [
+            "No data collection or tracking",
+            "Uncensored model access",
+            "Anonymous usage supported"
+          ]
+        }
+      ],
+      "community_news": [
+        {
+          "name": "Reddit",
+          "url": "https://www.reddit.com",
+          "description": "Essential for AI news and discussions",
+          "subreddits": ["r/LocalLLaMA", "r/StableDiffusion", "r/MachineLearning"],
+          "value": [
+            "Real-time updates on model releases and techniques",
+            "Community troubleshooting and experience sharing"
+          ]
+        },
+        {
+          "name": "Discord",
+          "url": "https://discord.com",
+          "description": "Primary platform for AI community conversations",
+          "value": [
+            "Most AI projects maintain active Discord servers",
+            "Direct access to developers and community experts",
+            "Real-time support and collaboration"
+          ],
+          "examples": ["Ollama", "Stable Diffusion", "various model communities"]
+        }
+      ]
+    }
+  },
+  "cost_breakdown": {
+    "monthly_subscriptions": [
+      {
+        "service": "Claude Code",
+        "tier": "Pro (Basic)",
+        "cost": "$17/month"
+      },
+      {
+        "service": "Claude Code",
+        "tier": "Max",
+        "cost": "$100/month"
+      }
+    ],
+    "usage_based_services": [
+      {
+        "category": "STT",
+        "primary": "OpenAI Whisper API",
+        "pricing": "Per-usage"
+      },
+      {
+        "category": "TTS",
+        "options": ["ElevenLabs (premium)", "OpenAI (budget)"],
+        "pricing": "Per-usage"
+      },
+      {
+        "category": "Real-Time APIs",
+        "note": "Various providers (generally expensive)",
+        "pricing": "Per-usage"
+      },
+      {
+        "category": "Cloud Infrastructure",
+        "provider": "GCP",
+        "pricing": "Variable based on usage"
+      },
+      {
+        "category": "Serverless Compute",
+        "providers": ["RunPod", "Modal"],
+        "pricing": "Pay-per-use"
+      },
+      {
+        "category": "AI Studio + Cloud Run",
+        "pricing": "API costs (variable)"
+      }
+    ]
+  },
+  "philosophy": {
+    "what_most_useful": {
+      "simple_text_transformations": {
+        "description": "Many practical uses for LLMs are simple text transformations",
+        "requirements": [
+          "You don't need high-reasoning models",
+          "You want good instruction-following",
+          "Models like IBM Granite, Microsoft Phi work well",
+          "Cost-effective and reliable"
+        ],
+        "example": "Running evaluations across 10+ models to find which handles 'AI Brevity' best (avoiding verbose outputs that resist system prompting)"
+      },
+      "programmatic_ai": {
+        "description": "I find programmatic integration and instructional AI more useful than chatbots. This provides value through automation, batch processing, and system integration."
+      }
+    },
+    "how_think_about_stack": {
+      "principles": [
+        "Flexibility: Multiple options for each capability (premium vs. budget, cloud vs. local)",
+        "Task-Appropriate Tooling: Different tools for different workload types (sync vs. async, batch vs. real-time)",
+        "Security Tiers: Options from cloud APIs to air-gapped local inference",
+        "Cost Balance: Premium services for some things, cost-effective alternatives for others",
+        "CLI Tools: Preference for CLI tools and automation pipelines",
+        "Stack Consolidation: Minimize API fragmentation through unified platforms (OpenRouter, Replicate, Fal)",
+        "Expense Management: Practical accounting and budgeting (matters for business use)"
+      ]
+    }
+  }
+}
