@@ -222,6 +222,10 @@ Requires separate API subscriptions. Generally expensive but essential for live 
 
 *   [Fal](https://fal.ai): Similar offering, seems to have more Chinese models
 *   [Replicate](https://replicate.com): Good for model exploration and API-based workflows
+    *   [Collections](https://replicate.com/collections): Organized model categories
+    *   [Text-to-Image](https://replicate.com/collections/text-to-image): Image generation models
+    *   [Image Editing](https://replicate.com/collections/image-editing): Image inpainting and manipulation
+    *   [Text-to-Video](https://replicate.com/collections/text-to-video): Video generation models
 
 **Why These Are Useful**:
 
@@ -250,7 +254,14 @@ I don't have strong opinions about which is better. Fal seems to have more Chine
 
 *   Text-to-image generation
 *   Image-to-image transformation
+*   Image inpainting and editing
 *   Available through Replicate, Fal, and direct model APIs
+
+**Noteworthy Models:**
+
+*   [Nano Banana](https://replicate.com/google/nano-banana): Google's image-to-image model
+    *   Fast, efficient transformations
+    *   Good for style transfer and variations
 
 ### Video Generation
 
@@ -259,6 +270,12 @@ I don't have strong opinions about which is better. Fal seems to have more Chine
 *   Image-to-video conversion
 *   Text-to-video creation
 *   Accessible via Replicate and Fal platforms
+
+**Noteworthy Models:**
+
+*   [Wan Video 2.5 I2V Fast](https://replicate.com/wan-video/wan-2.5-i2v-fast): Budget-friendly image-to-video
+    *   Cost-effective for experimental video generation
+    *   Good balance of speed and quality
 
 ### Multimodal Inference
 
@@ -452,7 +469,20 @@ The various vendor CLIs (Gemini CLI, Claude CLI, OpenAI CLI, Qwen CLI) provide v
 ### Software Stack
 
 *   [LM Studio](https://lmstudio.ai): GUI interface for local models
+    *   User-friendly interface for model management
+    *   Good for experimenting with different models
+    *   Supports multiple model formats
 *   [Ollama](https://ollama.com): CLI-based local inference
+    *   Preferred for batch processing and automation
+    *   Efficient model management
+    *   Easy integration with scripts and workflows
+*   [ComfyUI](https://github.com/comfyanonymous/ComfyUI): Node-based interface for Stable Diffusion
+    *   Workflow-driven image generation
+    *   Powerful for complex generation pipelines
+    *   Good for iterative experimentation
+*   [rmbg](https://github.com/zhbhun/rmbg): Background removal tool
+    *   Local background removal
+    *   Fast and efficient processing
 
 ### Hardware
 
@@ -727,6 +757,9 @@ This AI stack reflects a few principles:
 *   [Fal](https://fal.ai) - Fast inference platform
 *   [Fireworks](https://fireworks.ai) - Fast inference API
 *   [Replicate](https://replicate.com) - Multi-modal generation
+    *   [Collections](https://replicate.com/collections) - Organized model categories
+    *   [Nano Banana](https://replicate.com/google/nano-banana) - Image-to-image model
+    *   [Wan Video 2.5 I2V Fast](https://replicate.com/wan-video/wan-2.5-i2v-fast) - Budget video generation
 
 ### Data & Retrieval
 
@@ -751,10 +784,12 @@ This AI stack reflects a few principles:
 ### Local AI
 
 *   [AMD Radeon](https://www.amd.com/en/graphics/radeon-rx-graphics) - GPU hardware
+*   [ComfyUI](https://github.com/comfyanonymous/ComfyUI) - Node-based Stable Diffusion interface
 *   [LM Studio](https://lmstudio.ai) - Local model interface
 *   [Meta Llama](https://ai.meta.com/llama/) - Open model family
 *   [NVIDIA](https://www.nvidia.com) - Recommended GPU
 *   [Ollama](https://ollama.com) - Local inference CLI
+*   [rmbg](https://github.com/zhbhun/rmbg) - Background removal tool
 *   [ROCm](https://www.amd.com/en/products/software/rocm.html) - AMD compute
 
 ### Automation
