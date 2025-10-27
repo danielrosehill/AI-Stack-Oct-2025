@@ -555,154 +555,105 @@ This AI stack reflects a few principles:
 
 | Service | Description | Link |
 |---------|-------------|------|
-| ![Claude](https://img.shields.io/badge/Claude-AI-191919?style=flat&logo=anthropic) | Primary LLM interface | [claude.ai](https://claude.ai) |
-| ![Claude Code](https://img.shields.io/badge/Claude_Code-CLI-191919?style=flat&logo=anthropic) | CLI development tool | [docs.claude.com](https://docs.claude.com/claude-code) |
-| ![ChatGPT](https://img.shields.io/badge/ChatGPT-AI-412991?style=flat&logo=openai) | Day-to-day LLM interface | [chat.openai.com](https://chat.openai.com) |
-| ![OpenAI](https://img.shields.io/badge/OpenAI-API-412991?style=flat&logo=openai) | LLM API access | [openai.com](https://openai.com) |
-| ![Gemini](https://img.shields.io/badge/Gemini-AI-4285F4?style=flat&logo=google) | Google's LLM platform | [gemini.google.com](https://gemini.google.com) |
-| ![OpenRouter](https://img.shields.io/badge/OpenRouter-API_Gateway-9333EA?style=flat) | Unified multi-model API | [openrouter.ai](https://openrouter.ai) |
+| Claude | Primary LLM interface | [![Visit Website](https://img.shields.io/badge/Visit-Website-191919?style=flat)](https://claude.ai) |
+| Claude Code | CLI development tool | [![Visit Website](https://img.shields.io/badge/Visit-Website-191919?style=flat)](https://docs.claude.com/claude-code) |
+| ChatGPT | Day-to-day LLM interface | [![Visit Website](https://img.shields.io/badge/Visit-Website-412991?style=flat)](https://chat.openai.com) |
+| OpenAI | LLM API access | [![Visit Website](https://img.shields.io/badge/Visit-Website-412991?style=flat)](https://openai.com) |
+| Gemini | Google's LLM platform | [![Visit Website](https://img.shields.io/badge/Visit-Website-4285F4?style=flat)](https://gemini.google.com) |
+| OpenRouter | Unified multi-model API | [![Visit Website](https://img.shields.io/badge/Visit-Website-9333EA?style=flat)](https://openrouter.ai) |
 
 ### Development Tools
 
 | Tool | Description | Link |
 |------|-------------|------|
-| ![GitHub Copilot](https://img.shields.io/badge/GitHub_Copilot-AI_Assistant-181717?style=flat&logo=github) | Code completion | [github.com/features/copilot](https://github.com/features/copilot) |
-| ![Aider](https://img.shields.io/badge/Aider-Pair_Programming-00ADD8?style=flat) | AI pair programming | [aider.chat](https://aider.chat) |
-| ![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=flat&logo=github) | Code hosting | [github.com](https://github.com) |
-| ![Open Interpreter](https://img.shields.io/badge/Open_Interpreter-CLI-000000?style=flat) | Natural language interface | [GitHub](https://github.com/KillianLucas/open-interpreter) |
+| GitHub Copilot | Code completion | [![Visit Website](https://img.shields.io/badge/Visit-Website-181717?style=flat)](https://github.com/features/copilot) |
+| Aider | AI pair programming | [![Visit Website](https://img.shields.io/badge/Visit-Website-00ADD8?style=flat)](https://aider.chat) |
+| GitHub | Code hosting | [![Visit Website](https://img.shields.io/badge/Visit-Website-181717?style=flat)](https://github.com) |
+| Open Interpreter | Natural language interface | [![Visit Website](https://img.shields.io/badge/Visit-Website-000000?style=flat)](https://github.com/KillianLucas/open-interpreter) |
 
 ### Model Context Protocol (MCP)
 
 | Service | Description | Link |
 |---------|-------------|------|
-| ![Smithery](https://img.shields.io/badge/Smithery-MCP_Hub-FF6B6B?style=flat) | MCP marketplace | [smithery.ai](https://smithery.ai) |
-| ![MCP Servers](https://img.shields.io/badge/MCP-Servers-181717?style=flat&logo=github) | Official MCP servers | [GitHub](https://github.com/modelcontextprotocol/servers) |
+| Smithery | MCP marketplace | [![Visit Website](https://img.shields.io/badge/Visit-Website-FF6B6B?style=flat)](https://smithery.ai) |
+| MCP Servers | Official MCP servers | [![Visit Website](https://img.shields.io/badge/Visit-Website-181717?style=flat)](https://github.com/modelcontextprotocol/servers) |
 
 ### Speech & Voice
 
 | Service | Type | Description | Link |
 |---------|------|-------------|------|
-| ![Whisper](https://img.shields.io/badge/Whisper-STT-412991?style=flat&logo=openai) | STT | Baseline transcription | [openai.com/research/whisper](https://openai.com/research/whisper) |
-| ![AssemblyAI](https://img.shields.io/badge/AssemblyAI-STT-00C58E?style=flat) | STT | Long-form with diarization | [assemblyai.com](https://www.assemblyai.com) |
-| ![Deepgram](https://img.shields.io/badge/Deepgram-STT-13EF93?style=flat) | STT | Task-dependent | [deepgram.com](https://deepgram.com) |
-| ![Speechmatics](https://img.shields.io/badge/Speechmatics-STT-00C4CC?style=flat) | STT | Advanced voice platform | [speechmatics.com](https://www.speechmatics.com) |
-| ![Gladia](https://img.shields.io/badge/Gladia-STT-6366F1?style=flat) | STT | Solid performance | [gladia.io](https://www.gladia.io) |
-| ![Lemonfox](https://img.shields.io/badge/Lemonfox-STT-FCD34D?style=flat) | STT | Budget-friendly | [lemonfox.ai](https://lemonfox.ai) |
-| ![Blabby](https://img.shields.io/badge/Blabby-STT-FF6B6B?style=flat) | STT | Browser-based | [blabby.co](https://blabby.co) |
-| ![ElevenLabs](https://img.shields.io/badge/ElevenLabs-TTS-000000?style=flat) | TTS | Premium quality | [elevenlabs.io](https://elevenlabs.io) |
-| ![Eden AI](https://img.shields.io/badge/Eden_AI-API_Hub-00D9FF?style=flat) | Aggregator | Multi-provider batching | [edenai.co](https://www.edenai.co) |
+| Whisper | STT | Baseline transcription | [![Visit Website](https://img.shields.io/badge/Visit-Website-412991?style=flat)](https://openai.com/research/whisper) |
+| AssemblyAI | STT | Long-form with diarization | [![Visit Website](https://img.shields.io/badge/Visit-Website-00C58E?style=flat)](https://www.assemblyai.com) |
+| Deepgram | STT | Task-dependent | [![Visit Website](https://img.shields.io/badge/Visit-Website-13EF93?style=flat)](https://deepgram.com) |
+| Speechmatics | STT | Advanced voice platform | [![Visit Website](https://img.shields.io/badge/Visit-Website-00C4CC?style=flat)](https://www.speechmatics.com) |
+| Gladia | STT | Solid performance | [![Visit Website](https://img.shields.io/badge/Visit-Website-6366F1?style=flat)](https://www.gladia.io) |
+| Lemonfox | STT | Budget-friendly | [![Visit Website](https://img.shields.io/badge/Visit-Website-FCD34D?style=flat)](https://lemonfox.ai) |
+| Blabby | STT | Browser-based | [![Visit Website](https://img.shields.io/badge/Visit-Website-FF6B6B?style=flat)](https://blabby.co) |
+| ElevenLabs | TTS | Premium quality | [![Visit Website](https://img.shields.io/badge/Visit-Website-000000?style=flat)](https://elevenlabs.io) |
+| Eden AI | Aggregator | Multi-provider batching | [![Visit Website](https://img.shields.io/badge/Visit-Website-00D9FF?style=flat)](https://www.edenai.co) |
 
 ### Generative AI Platforms
 
 | Platform | Description | Link |
 |----------|-------------|------|
-| ![Replicate](https://img.shields.io/badge/Replicate-Model_Marketplace-000000?style=flat) | Multi-modal generation | [replicate.com](https://replicate.com) |
-| ![Fal](https://img.shields.io/badge/Fal-Fast_Inference-FF4785?style=flat) | Fast inference platform | [fal.ai](https://fal.ai) |
-| ![Fireworks](https://img.shields.io/badge/Fireworks-Fast_API-FF5A1F?style=flat) | Fast inference API | [fireworks.ai](https://fireworks.ai) |
+| Replicate | Multi-modal generation | [![Visit Website](https://img.shields.io/badge/Visit-Website-000000?style=flat)](https://replicate.com) |
+| Fal | Fast inference platform | [![Visit Website](https://img.shields.io/badge/Visit-Website-FF4785?style=flat)](https://fal.ai) |
+| Fireworks | Fast inference API | [![Visit Website](https://img.shields.io/badge/Visit-Website-FF5A1F?style=flat)](https://fireworks.ai) |
 
 ### Data & Retrieval
 
 | Service | Type | Description | Link |
 |---------|------|-------------|------|
-| ![Firecrawl](https://img.shields.io/badge/Firecrawl-Web_Scraping-FF4500?style=flat) | Scraping | Web to markdown | [firecrawl.dev](https://www.firecrawl.dev) |
-| ![Ragie](https://img.shields.io/badge/Ragie-RAG-6366F1?style=flat) | RAG | RAG as a service | [ragie.ai](https://www.ragie.ai) |
-| ![Supermemory](https://img.shields.io/badge/Supermemory-RAG-9333EA?style=flat) | RAG | Managed RAG | [supermemory.ai](https://supermemory.ai) |
-| ![Pinecone](https://img.shields.io/badge/Pinecone-Vector_DB-000000?style=flat) | Vector DB | Vector database | [pinecone.io](https://www.pinecone.io) |
-| ![Qdrant](https://img.shields.io/badge/Qdrant-Vector_DB-DC244C?style=flat) | Vector DB | Vector search | [qdrant.tech](https://qdrant.tech) |
-| ![Mistral](https://img.shields.io/badge/Mistral-AI-FF6B6B?style=flat) | OCR | Document understanding | [mistral.ai](https://mistral.ai) |
-| ![LlamaIndex](https://img.shields.io/badge/LlamaIndex-Framework-9333EA?style=flat) | Framework | Document processing | [llamaindex.ai](https://www.llamaindex.ai) |
+| Firecrawl | Scraping | Web to markdown | [![Visit Website](https://img.shields.io/badge/Visit-Website-FF4500?style=flat)](https://www.firecrawl.dev) |
+| Ragie | RAG | RAG as a service | [![Visit Website](https://img.shields.io/badge/Visit-Website-6366F1?style=flat)](https://www.ragie.ai) |
+| Supermemory | RAG | Managed RAG | [![Visit Website](https://img.shields.io/badge/Visit-Website-9333EA?style=flat)](https://supermemory.ai) |
+| Pinecone | Vector DB | Vector database | [![Visit Website](https://img.shields.io/badge/Visit-Website-000000?style=flat)](https://www.pinecone.io) |
+| Qdrant | Vector DB | Vector search | [![Visit Website](https://img.shields.io/badge/Visit-Website-DC244C?style=flat)](https://qdrant.tech) |
+| Mistral | OCR | Document understanding | [![Visit Website](https://img.shields.io/badge/Visit-Website-FF6B6B?style=flat)](https://mistral.ai) |
+| LlamaIndex | Framework | Document processing | [![Visit Website](https://img.shields.io/badge/Visit-Website-9333EA?style=flat)](https://www.llamaindex.ai) |
 
 ### Cloud & Deployment
 
 | Platform | Description | Link |
 |----------|-------------|------|
-| ![GCP](https://img.shields.io/badge/Google_Cloud-Platform-4285F4?style=flat&logo=googlecloud) | Primary cloud | [cloud.google.com](https://cloud.google.com) |
-| ![Vercel](https://img.shields.io/badge/Vercel-Deployment-000000?style=flat&logo=vercel) | Serverless frontend | [vercel.com](https://vercel.com) |
-| ![Netlify](https://img.shields.io/badge/Netlify-Deployment-00C7B7?style=flat&logo=netlify) | (Previously used) | [netlify.com](https://www.netlify.com) |
-| ![RunPod](https://img.shields.io/badge/RunPod-GPU_Compute-6366F1?style=flat) | GPU on demand | [runpod.io](https://www.runpod.io) |
-| ![Modal](https://img.shields.io/badge/Modal-Serverless-000000?style=flat) | Serverless compute | [modal.com](https://modal.com) |
-| ![HF Spaces](https://img.shields.io/badge/Hugging_Face-Spaces-FFD21E?style=flat&logo=huggingface) | Rapid prototyping | [huggingface.co/spaces](https://huggingface.co/spaces) |
+| Google Cloud Platform | Primary cloud | [![Visit Website](https://img.shields.io/badge/Visit-Website-4285F4?style=flat)](https://cloud.google.com) |
+| Vercel | Serverless frontend | [![Visit Website](https://img.shields.io/badge/Visit-Website-000000?style=flat)](https://vercel.com) |
+| Netlify | (Previously used) | [![Visit Website](https://img.shields.io/badge/Visit-Website-00C7B7?style=flat)](https://www.netlify.com) |
+| RunPod | GPU on demand | [![Visit Website](https://img.shields.io/badge/Visit-Website-6366F1?style=flat)](https://www.runpod.io) |
+| Modal | Serverless compute | [![Visit Website](https://img.shields.io/badge/Visit-Website-000000?style=flat)](https://modal.com) |
+| Hugging Face Spaces | Rapid prototyping | [![Visit Website](https://img.shields.io/badge/Visit-Website-FFD21E?style=flat)](https://huggingface.co/spaces) |
 
 ### Local AI
 
 | Tool | Description | Link |
 |------|-------------|------|
-| ![LM Studio](https://img.shields.io/badge/LM_Studio-GUI-000000?style=flat) | Local model interface | [lmstudio.ai](https://lmstudio.ai) |
-| ![Ollama](https://img.shields.io/badge/Ollama-CLI-000000?style=flat) | Local inference CLI | [ollama.com](https://ollama.com) |
-| ![AMD Radeon](https://img.shields.io/badge/AMD-Radeon-ED1C24?style=flat&logo=amd) | GPU hardware | [amd.com/radeon-rx](https://www.amd.com/en/graphics/radeon-rx-graphics) |
-| ![ROCm](https://img.shields.io/badge/ROCm-Platform-ED1C24?style=flat&logo=amd) | AMD compute | [amd.com/rocm](https://www.amd.com/en/products/software/rocm.html) |
-| ![NVIDIA](https://img.shields.io/badge/NVIDIA-GPU-76B900?style=flat&logo=nvidia) | Recommended GPU | [nvidia.com](https://www.nvidia.com) |
-| ![Llama](https://img.shields.io/badge/Meta-Llama-0668E1?style=flat&logo=meta) | Open model family | [ai.meta.com/llama](https://ai.meta.com/llama/) |
+| LM Studio | Local model interface | [![Visit Website](https://img.shields.io/badge/Visit-Website-000000?style=flat)](https://lmstudio.ai) |
+| Ollama | Local inference CLI | [![Visit Website](https://img.shields.io/badge/Visit-Website-000000?style=flat)](https://ollama.com) |
+| AMD Radeon | GPU hardware | [![Visit Website](https://img.shields.io/badge/Visit-Website-ED1C24?style=flat)](https://www.amd.com/en/graphics/radeon-rx-graphics) |
+| ROCm | AMD compute | [![Visit Website](https://img.shields.io/badge/Visit-Website-ED1C24?style=flat)](https://www.amd.com/en/products/software/rocm.html) |
+| NVIDIA | Recommended GPU | [![Visit Website](https://img.shields.io/badge/Visit-Website-76B900?style=flat)](https://www.nvidia.com) |
+| Meta Llama | Open model family | [![Visit Website](https://img.shields.io/badge/Visit-Website-0668E1?style=flat)](https://ai.meta.com/llama/) |
 
 ### Automation
 
 | Tool | Description | Link |
 |------|-------------|------|
-| ![n8n](https://img.shields.io/badge/n8n-Workflow_Automation-EA4B71?style=flat) | Visual automation | [n8n.io](https://n8n.io) |
+| n8n | Visual automation | [![Visit Website](https://img.shields.io/badge/Visit-Website-EA4B71?style=flat)](https://n8n.io) |
 
 ### Google Ecosystem
 
 | Service | Description | Link |
 |---------|-------------|------|
-| ![NotebookLM](https://img.shields.io/badge/NotebookLM-Research-4285F4?style=flat&logo=google) | Knowledge synthesis | [notebooklm.google.com](https://notebooklm.google.com) |
-| ![AI Studio](https://img.shields.io/badge/AI_Studio-Development-4285F4?style=flat&logo=google) | Development environment | [aistudio.google.com](https://aistudio.google.com) |
-| ![Cloud Run](https://img.shields.io/badge/Cloud_Run-Deployment-4285F4?style=flat&logo=googlecloud) | Serverless containers | [cloud.google.com/run](https://cloud.google.com/run) |
+| NotebookLM | Knowledge synthesis | [![Visit Website](https://img.shields.io/badge/Visit-Website-4285F4?style=flat)](https://notebooklm.google.com) |
+| AI Studio | Development environment | [![Visit Website](https://img.shields.io/badge/Visit-Website-4285F4?style=flat)](https://aistudio.google.com) |
+| Cloud Run | Serverless containers | [![Visit Website](https://img.shields.io/badge/Visit-Website-4285F4?style=flat)](https://cloud.google.com/run) |
 
 ### Self-Hosted & Open Source
 
 | Tool | Description | Link |
 |------|-------------|------|
-| ![Open WebUI](https://img.shields.io/badge/Open_WebUI-Self_Hosted-181717?style=flat&logo=github) | Self-hosted interface | [GitHub](https://github.com/open-webui/open-webui) |
+| Open WebUI | Self-hosted interface | [![Visit Website](https://img.shields.io/badge/Visit-Website-181717?style=flat)](https://github.com/open-webui/open-webui) |
 
 ---
 
 **Last Updated**: October 27, 2025
-
-[claude]: https://claude.ai
-[claude-code]: https://docs.claude.com/claude-code
-[chatgpt]: https://chat.openai.com
-[openai]: https://openai.com
-[gemini]: https://gemini.google.com
-[openrouter]: https://openrouter.ai
-[codex]: https://github.com/features/copilot
-[aider]: https://aider.chat
-[github]: https://github.com
-[open-interpreter]: https://github.com/KillianLucas/open-interpreter
-[smithery]: https://smithery.ai
-[context-mcp]: https://github.com/modelcontextprotocol/servers
-[whisper]: https://openai.com/research/whisper
-[assemblyai]: https://www.assemblyai.com
-[deepgram]: https://deepgram.com
-[speechmatics]: https://www.speechmatics.com
-[gladio]: https://www.gladia.io
-[lemonfox]: https://lemonfox.ai
-[blabby]: https://blabby.co
-[elevenlabs]: https://elevenlabs.io
-[edenai]: https://www.edenai.co
-[replicate]: https://replicate.com
-[fal]: https://fal.ai
-[fireworks]: https://fireworks.ai
-[firecrawl]: https://www.firecrawl.dev
-[ragie]: https://www.ragie.ai
-[supermemory]: https://supermemory.ai
-[pinecone]: https://www.pinecone.io
-[qdrant]: https://qdrant.tech
-[mistral]: https://mistral.ai
-[llamaindex]: https://www.llamaindex.ai
-[gcp]: https://cloud.google.com
-[vercel]: https://vercel.com
-[netlify]: https://www.netlify.com
-[runpod]: https://www.runpod.io
-[modal]: https://modal.com
-[hf-spaces]: https://huggingface.co/spaces
-[lmstudio]: https://lmstudio.ai
-[ollama]: https://ollama.com
-[amd-radeon]: https://www.amd.com/en/graphics/radeon-rx-graphics
-[rocm]: https://www.amd.com/en/products/software/rocm.html
-[nvidia]: https://www.nvidia.com
-[llama]: https://ai.meta.com/llama/
-[n8n]: https://n8n.io
-[notebooklm]: https://notebooklm.google.com
-[ai-studio]: https://aistudio.google.com
-[cloud-run]: https://cloud.google.com/run
-[open-webui]: https://github.com/open-webui/open-webui
