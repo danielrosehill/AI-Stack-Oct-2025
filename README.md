@@ -1,4 +1,4 @@
-# AI Stack Documentation
+# My AI Stack - October 2025 Iteration
 
 ![alt text](graphics/banner.png)
 
