@@ -1,6 +1,8 @@
 # AI Stack Documentation
 
-*Last Updated: October 2025*
+![alt text](graphics/banner.png)
+
+[![Date](https://img.shields.io/badge/Date-2025--10--27-blue.svg)](https://github.com/AI-Stack-Oct-2025)
 
 A point-in-time overview of my AI infrastructure, tools, and services for development, deployment, and production workflows.
 
