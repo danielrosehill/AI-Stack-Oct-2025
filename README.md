@@ -9,13 +9,13 @@ A point-in-time overview of my AI infrastructure, tools, and services for develo
 
 Once or twice a year, usually around winter, I organize all my GitHub repositories - consolidating, deleting old ones, creating new ones. Part of this process is documenting my AI stack.
 
-Friends and clients frequently ask: "With so much on the market, what do you think is good?" This document serves multiple purposes:
+Friends and clients sometimes ask: "With so much on the market, what are you using?" This document captures:
 
-1. **Recommendations**: A reference for people looking to build their own AI stack
-2. **Evolution tracking**: The AI space moves so rapidly you could version control your stack monthly. I note what I'm adding, dropping, and why I find something valuable
-3. **Budget planning**: Transparency about what AI tooling actually costs at different levels
+1. What I'm currently using for different tasks
+2. Why I've picked up or dropped certain tools
+3. What these things actually cost
 
-This is a fluid, evolving entity. The pace of evolution in AI is so rapid that this is truly a point-in-time snapshot.
+The AI space moves quickly enough that these notes could be out of date in months, but I find it useful to document where things stand.
  
 
 ## Core Infrastructure
@@ -24,76 +24,73 @@ This is a fluid, evolving entity. The pace of evolution in AI is so rapid that t
 The backbone of the entire AI stack, powering nearly every component and workflow.
 
 **Primary Interfaces:**
-- **CLI**: Claude Code (Pro: $17/month | Max: $100/month) - *The greatest thing I've found since ChatGPT*
-- **GUI**: Claude interface (included with Claude Code subscription)
-- **ChatGPT**: Day-to-day interface for general tasks
-- **OpenAI**: API access and integrations
+- **CLI**: [Claude Code][claude-code] (Pro: $17/month | Max: $100/month) - *The greatest thing I've found since ChatGPT*
+- **GUI**: [Claude][claude] interface (included with Claude Code subscription)
+- **[ChatGPT][chatgpt]**: Day-to-day interface for general tasks
+- **[OpenAI][openai]**: API access and integrations
 
-**Why Claude Code Has Been Transformative**:
+**Why I Use Claude Code**:
 
-After 20 years of using Linux, CLIs are second nature, but I've always preferred GUIs when available. Claude Code changed that completely.
+After 20 years of using Linux, CLIs are familiar, but I've generally preferred GUIs when they're available. Claude Code has changed how I approach system management.
 
-When I started using Claude Code (along with Gemini CLI and CodeX), I immediately thought: "Why isn't there a bigger movement to use these things for local computer management?" There was a project called Open Interpreter that showed promise, but Claude Code goes beyond.
+When I started using it (along with [Gemini][gemini] CLI and [CodeX][codex]), I wondered why there wasn't more focus on using these tools for local computer management. There was a project called [Open Interpreter][open-interpreter] that had potential, but Claude Code covers more ground.
 
-**What It Solves**:
-Linux has gotten easier over time, but there's always been a list of things that don't quite work - bugs, things I wish I could do. For the first time ever, that list is nearly empty. Every time I have a problem now, I just say "Hey Claude, any chance you can figure out why..." or "create a shortcut for turning the screens on and off" - and it just works through all of those issues.
+**What It Helps With**:
+Linux has gotten easier over time, but there's always been a list of things that don't quite work - bugs, things I wish I could do. That list is now much shorter. When I run into issues, I can just say "Hey Claude, any chance you can figure out why..." or "create a shortcut for turning the screens on and off" - and it handles most of these.
 
 **Use Cases**:
 - Local system administration
-- Home lab management (I hate to call it a home lab because I never intended to get into home labbing, but here we are)
-- Remote server fixes in record time
-- Solving persistent Linux issues
+- Home lab management (didn't intend to get into home labbing, but here we are)
+- Remote server fixes
+- Solving Linux issues that used to linger
 
-I saw someone on Hugging Face say Claude Code has been the greatest thing they've found since ChatGPT. I felt validated because I've felt exactly the same way.
-
-**Note on Self-Hosted Interfaces**: Previously used Open WebUI (self-hosted chat interface). Before becoming a father and getting busy, I reached the conclusion that there wasn't a compelling reason to deal with the hassle of things breaking and needing fixes. Simplicity and reliability won out over self-hosting.
+**Note on Self-Hosted Interfaces**: Previously used [Open WebUI][open-webui] (self-hosted chat interface). Before becoming a father and getting busy, I reached the conclusion that there wasn't a compelling reason to deal with the hassle of things breaking and needing fixes. Simplicity and reliability won out over self-hosting.
 
 **API Access:**
-- **OpenRouter** (Primary recommendation): Unified API gateway for multiple LLM providers
-  - *First thing I'd recommend beyond ChatGPT*
-  - Direct vendor APIs available from all major providers
-  - Frontend choice is virtually limitless - CLI, web apps, desktop apps, custom integrations
+- **[OpenRouter][openrouter]**: Unified API gateway for multiple LLM providers
+  - Direct vendor APIs also available from all major providers
+  - Can be used with CLI tools, web apps, desktop apps, custom integrations
 
-**Why OpenRouter Is Essential**:
+**Why I Use OpenRouter**:
 
-I'm not always sure whether you get the same quality of inference as when using the vendor directly. For Claude specifically, it seems like best performance comes from Anthropic rather than using it through Winserf or OpenRouter. I assume there's a reason for that and it's not just my imagination. So there's always a case for first-party access.
+I'm not always sure whether you get the same quality of inference as when using the vendor directly. For Claude specifically, it seems like better performance comes from Anthropic rather than routing through OpenRouter. So there's still a case for first-party access.
 
-But for someone looking to go beyond ChatGPT (which is actually why I jotted down these stack notes), OpenRouter would be one of the first things I'd recommend.
+That said, for someone looking to go beyond ChatGPT, OpenRouter is worth considering early.
 
-**Two Major Reasons**:
+**Two Main Reasons**:
 
-1. **Expense Consolidation** (often under-articulated):
-   - When you have your own business and need to provide expenses to your accountant, one API bill is vastly easier than fragmented charges
-   - Budgeting: Very easy to lose track when spending $20 here and there on different APIs
-   - With OpenRouter: "This is my OpenRouter account. I set my spend limits here." Clear budget control.
+1. **Expense Consolidation**:
+   - When you run a business and need to provide expenses to your accountant, one API bill is easier than fragmented charges
+   - It's easy to lose track when spending $20 here and there on different APIs
+   - With OpenRouter, you set spend limits in one place
 
 2. **Model Exploration**:
-   - Try out many different models without separate accounts
-   - Example: I ran an evaluation today called "AI Brevity" (I'm frustrated by AI verbosity, and system prompts like "be super concise" don't help)
+   - Try different models without separate accounts
+   - Example: I ran an evaluation called "AI Brevity" (looking at which models actually follow conciseness instructions)
    - Ran the same prompt through 10 models using OpenRouter and a script
-   - OpenRouter is the logical entry point because you've got all the models available and just change the model parameter
+   - Convenient because you just change the model parameter
 
 **What's Beyond the Big Names**:
-There's a lot more than OpenAI, Anthropic, Gemini. It's interesting to keep an eye on:
+There's more than OpenAI, Anthropic, Gemini worth looking at:
 - What's coming out of China
 - What's emerging at the frontier of fine-tunable models
-- Models that never make the news: IBM Granite, Amazon's models, Microsoft Phi
-- Some of these are particularly good at instruction following
+- Models that don't make headlines: IBM Granite, Amazon's models, Microsoft Phi
+- Some of these are good at instruction following
 
-**Where This Really Matters**:
-I find the most transformative and robust uses for LLMs right now are frequently just simple text transformations. For that, you don't need or want a very high-reasoning model. You want something that's just good at: "Okay, this is the system prompt, this is your task, go from A to B."
+**Where This Matters**:
+I find that many practical uses for LLMs are simple text transformations. For those, you don't need a high-reasoning model. You want something good at: "Here's the system prompt, here's your task, go from A to B."
 
-Accessing those models through serverless inference on demand is useful, but stack consolidation is always the order of the day. Having a mix of open-source and commercial models all through the same API is a big advantage.
+Having a mix of open-source and commercial models through one API is convenient for this kind of work.
 
-> **Getting Started**: Set up an account on OpenRouter. Drop in $50 if you can afford it to have balance on hand and room to play around (they also offer some free inference). Whether you're self-hosting a chat interface like Open WebUI or looking for programmatic integration, this is where AI becomes exciting and cool - when you see that instructional AI and programmatic AI is very mature and brings independent value over chatbots.
+> **Getting Started**: Set up an account on OpenRouter. They offer some free inference to try it out. If you're self-hosting a chat interface like Open WebUI or looking for programmatic integration, this is where you can see that instructional AI and programmatic AI can be useful beyond chatbots.
 
 > **Performance Note**: First-party vendor access (e.g., Anthropic for Claude) may provide better inference quality than routing through aggregators. For production workloads with specific models, consider direct vendor access.
 
 **Model Context Protocol (MCP):**
-- Smithery
-- Github
-- Context (for API documentation lookup)
-- Firecrawl (covered in Data Retrieval section)
+- [Smithery][smithery]
+- [Github][github]
+- [Context][context-mcp] (for API documentation lookup)
+- [Firecrawl][firecrawl] (covered in Data Retrieval section)
 
 ---
 
@@ -102,22 +99,22 @@ Accessing those models through serverless inference on demand is useful, but sta
 ### Speech-to-Text (STT)
 
 **Primary Services:**
-- **Whisper** (via OpenAI API): Solid baseline, good value
+- **[Whisper][whisper]** (via OpenAI API): Solid baseline, good value
   - Note: OpenAI's newer model hasn't shown significant improvement in my workloads
-- **Browser-based tools** (e.g., Blabby): Convenient for quick tasks
+- **Browser-based tools** (e.g., [Blabby][blabby]): Convenient for quick tasks
 - **OS-level integration tools**: For continuous dictation
 
 **Specialized Services:**
-- **AssemblyAI**: Long-form transcription with speaker diarization (used frequently)
+- **[AssemblyAI][assemblyai]**: Long-form transcription with speaker diarization (used frequently)
   - Essential for meeting transcripts and AI minute extraction
   - Diarization is a foundational element for quality downstream processing
-- **Deepgram**: Task-dependent usage
-- **Speechmatics**: Advanced voice technology platform
-- **Gladio**: Very solid performance
-- **Lemonfox**: Budget-friendly option for cost-sensitive jobs
+- **[Deepgram][deepgram]**: Task-dependent usage
+- **[Speechmatics][speechmatics]**: Advanced voice technology platform
+- **[Gladio][gladio]**: Very solid performance
+- **[Lemonfox][lemonfox]**: Budget-friendly option for cost-sensitive jobs
 
 **API Aggregators:**
-- **Eden AI**: Multi-provider API batching and management
+- **[Eden AI][edenai]**: Multi-provider API batching and management
 
 > **Critical Learning**: Don't expect the STT tool you use for live transcription to work well for asynchronous jobs like meeting transcripts. There are significant performance differences within STT tools across synchronous vs. asynchronous workloads. Match the tool to the specific task requirements.
 
@@ -130,12 +127,12 @@ Accessing those models through serverless inference on demand is useful, but sta
 ### Text-to-Speech (TTS)
 
 **Premium Option:**
-- **ElevenLabs**: Best-in-class quality with excellent expressiveness
+- **[ElevenLabs][elevenlabs]**: Best-in-class quality with excellent expressiveness
   - Drawback: Very expensive
   - Recommendation: Use when audio quality is critical
 
 **Budget-Friendly Options:**
-- **OpenAI TTS**: Good enough for majority of use cases
+- **[OpenAI TTS][openai]**: Good enough for majority of use cases
   - Lacks the expressiveness of ElevenLabs but significantly cheaper
   - Recommended for most projects unless premium audio is essential
 - **Various alternative providers**: Available based on specific needs
@@ -155,28 +152,27 @@ Requires separate API subscriptions. Generally expensive but essential for live 
 ### Multi-Modal Generation Platforms
 
 **Primary Platforms:**
-- **Replicate**: Absolutely brilliant for model exploration and API-based workflows
-- **Fal**: Massively impressive, slightly more exposure to Chinese models from what I can see
+- **[Replicate][replicate]**: Good for model exploration and API-based workflows
+- **[Fal][fal]**: Similar offering, seems to have more Chinese models
 
-**Why I'm Massively Impressed**:
+**Why These Are Useful**:
 
-Both platforms are absolutely brilliant. The value proposition is the same as OpenRouter but for generative AI.
+Both platforms offer the same value as OpenRouter but for generative AI.
 
-**It's Not Just Convenience**:
-Yes, it's convenient to run generative AI tasks like text-to-video using an API where you can just top up one account. But the real value is discovery and exploration:
+**Discovery Beyond Convenience**:
+Yes, it's convenient to run generative AI tasks like text-to-video through one API account. But the discovery aspect is equally valuable:
 
-- You can explore all the models they have available
-- Discover capabilities you didn't even know existed: "Oh my gosh, I never knew there was even such a thing as audio inpainting. Wait, that exists?"
-- Find companies and models you've never heard of
-- Test them all out with one task before deciding which is best and committing hundreds of dollars to that workload
+- You can explore available models in one place
+- Find capabilities you didn't know existed (audio inpainting, for example)
+- Try out models before committing budget to a specific workload
+- Find companies and models you haven't heard of
 
-**The Staggering Pace of Innovation**:
-I'm amazed by the pace at which new generative AI modalities and models are coming to market on these platforms. It's staggering. New capabilities appear constantly that I didn't even know were possible.
+New generative AI models and modalities appear on these platforms regularly.
 
 **Fal vs Replicate**:
-I don't have majorly strong opinions about which is better. Fal has slightly more exposure to Chinese models. Both are excellent.
+I don't have strong opinions about which is better. Fal seems to have more Chinese models. Both work well.
 
-> **Philosophy**: Similar to OpenRouter for LLMs, these platforms provide consolidated access to rapidly evolving generative capabilities through a single API. The discovery aspect is just as valuable as the consolidation.
+> **Note**: Similar to OpenRouter for LLMs, these platforms provide consolidated access to generative capabilities through a single API. The discovery aspect is as useful as the consolidation.
 
 ### Image Generation & Manipulation
 
@@ -214,47 +210,46 @@ I don't have majorly strong opinions about which is better. Fal has slightly mor
 Retrieval-Augmented Generation for working with proprietary datasets and knowledge bases.
 
 **RAG-as-a-Service:**
-- **Ragie**: RAG as a service via API
-- **Supermemory**: Philosophy of "don't build your own RAG pipeline"
+- **[Ragie][ragie]**: RAG as a service via API
+- **[Supermemory][supermemory]**: Philosophy of "don't build your own RAG pipeline"
 
 **Why Not DIY RAG**:
-Unless you have enterprise-level document stores, building RAG from scratch (Pinecone, Qdrant, custom embeddings, chunking strategies, vector sizes) is often not a good use of time. Services like Supermemory and memory layer tools handle this complexity, allowing developers to focus on "grounding AI in a few documents" rather than becoming retrieval engineers.
+Unless you have enterprise-level document stores, building RAG from scratch ([Pinecone][pinecone], [Qdrant][qdrant], custom embeddings, chunking strategies, vector sizes) is often time-consuming. Services like Supermemory and memory layer tools handle this complexity, letting you focus on grounding AI in documents rather than becoming a retrieval engineer.
 
-> **Philosophy**: For most developers not working at massive scale, managed RAG services prevent hours of setup and configuration for relatively simple document retrieval tasks.
+> **Note**: For most use cases not at massive scale, managed RAG services save setup time for relatively simple document retrieval tasks.
 
 ### External Data
 
-**Firecrawl**: Web scraping and data extraction
+**[Firecrawl][firecrawl]**: Web scraping and data extraction
 
-There's a whole world of MCP tools that are really useful, and Firecrawl is one I have to note here.
+There's a whole world of MCP tools, and Firecrawl is one I use regularly.
 
 **Why Markdown Matters**:
-Markdown is just such a useful format for AI workloads. The ability to quickly say, "Okay, these are the API docs for something that you can clearly see you're struggling with" is powerful.
+Markdown is a useful format for AI workloads. Being able to quickly say, "Okay, these are the API docs for something you're struggling with" helps.
 
-There's Context, which is a great MCP for this. But sometimes I can see exactly what Claude needs: "Oh wait, I need this in Markdown." Having one tool that you know can do this over and over reliably is extremely useful.
+There's Context, which is a good MCP for this. But sometimes I know exactly what Claude needs in Markdown format. Having a reliable tool for this is useful.
 
-**The Power of Model Definitions**:
-Being able to define the models for scraping is a great feature. It makes the extraction much more targeted and useful.
+**Model Definitions**:
+Being able to define models for scraping makes the extraction more targeted.
 
-**Why "Scraping" Shouldn't Be a Dirty Word**:
+**Scraping Your Own Content**:
 
-I think scraping is almost a bad word and a dirty word because people immediately assume it's spammy and illegal or whatever. But I've often used these tools to scrape my own stuff.
+People assume scraping is spammy or questionable, but I've often used these tools to scrape my own content.
 
 **Real Use Case**:
-If I have notes - "Oh, I wrote these notes a few years ago" - I can just use Firecrawl to pull this in. It's actually quicker to do that than to go back through my Google Drive from four years ago and then format that in Markdown.
+If I wrote notes a few years ago, I can use Firecrawl to pull them in. It's quicker than digging through old Google Drive folders and formatting to Markdown.
 
-**Versatility**:
-So it's useful across multiple domains:
+**Use Cases**:
 - Pulling your own historical content
-- Quick API documentation lookup via MCP
+- API documentation lookup via MCP
 - Converting web content to AI-friendly formats
 - Retrieving notes from various platforms
 
-> **Philosophy on Scraping**: Despite negative connotations, web scraping tools are incredibly useful for retrieving your own content, documentation, and notes from various platforms for AI processing. It's a legitimate productivity tool, not just for questionable use cases.
+> **Note on Scraping**: Web scraping tools are useful for retrieving your own content, documentation, and notes from various platforms for AI processing.
 
 ### Document Processing & OCR
-- **Mistral**: Document understanding
-- **LlamaIndex**: Document processing and indexing
+- **[Mistral][mistral]**: Document understanding
+- **[LlamaIndex][llamaindex]**: Document processing and indexing
 
 ---
 
@@ -263,33 +258,33 @@ So it's useful across multiple domains:
 ### Code Generation & Editing
 
 **Primary Tools:**
-- **Claude Code** (CLI-based development)
-- **Codex** (GitHub Copilot integration)
-- **Aider** (AI pair programming)
+- **[Claude Code][claude-code]** (CLI-based development)
+- **[Codex][codex]** (GitHub Copilot integration)
+- **[Aider][aider]** (AI pair programming)
 
 ### Code Hosting
-- **GitHub** (primary repository hosting)
+- **[GitHub][github]** (primary repository hosting)
 
 ---
 
 ## Cloud & Deployment
 
 ### Cloud Infrastructure
-- **Google Cloud Platform (GCP)**: Primary cloud provider
+- **[Google Cloud Platform (GCP)][gcp]**: Primary cloud provider
 
 ### Deployment Platforms
 - **On-server**: Self-hosted deployments
-- **Vercel**: Serverless frontend deployments
-  - Recently migrated from Netlify
+- **[Vercel][vercel]**: Serverless frontend deployments
+  - Recently migrated from [Netlify][netlify]
   - More AI-forward feature set
   - Environment variable sharing across projects is excellent
 
 ### Hardware On-Demand / Serverless
-- **RunPod**: GPU compute on demand
-- **Modal**: Serverless compute platform
+- **[RunPod][runpod]**: GPU compute on demand
+- **[Modal][modal]**: Serverless compute platform
 
 ### Prototyping & Lightweight Execution
-- **Hugging Face Spaces**: Rapid prototyping and lightweight app hosting
+- **[Hugging Face Spaces][hf-spaces]**: Rapid prototyping and lightweight app hosting
   - Supports private deployments
   - Excellent for quick experiments
 
@@ -300,10 +295,10 @@ So it's useful across multiple domains:
 ### Versatile AI APIs
 
 **Multi-Model Platforms:**
-- **OpenRouter** (unified API access)
-- **Fal** (fast inference)
-- **Replicate** (model marketplace)
-- **Fireworks** (fast inference)
+- **[OpenRouter][openrouter]** (unified API access)
+- **[Fal][fal]** (fast inference)
+- **[Replicate][replicate]** (model marketplace)
+- **[Fireworks][fireworks]** (fast inference)
 - Individual vendor APIs
 
 ---
@@ -311,13 +306,13 @@ So it's useful across multiple domains:
 ## Local AI Infrastructure
 
 ### Software Stack
-- **LM Studio**: GUI interface for local models
-- **Ollama**: CLI-based local inference
+- **[LM Studio][lmstudio]**: GUI interface for local models
+- **[Ollama][ollama]**: CLI-based local inference
 
 ### Hardware
 - **High-performance GPU** for local model inference
-  - Current: AMD Radeon (ROCm-compatible)
-  - **Recommendation**: Go with NVIDIA GPU for fewer compatibility issues
+  - Current: [AMD Radeon][amd-radeon] ([ROCm][rocm]-compatible)
+  - **Recommendation**: Go with [NVIDIA GPU][nvidia] for fewer compatibility issues
     - AMD works but adds complexity
     - NVIDIA has broader model support and easier setup
 
@@ -332,7 +327,7 @@ So it's useful across multiple domains:
 - **Large batch jobs**: Processing thousands of files (e.g., voice note classification)
   - No rate limiting concerns
   - Can run overnight
-  - Models like Meta Llama 3.1 for text transformation tasks
+  - Models like [Meta Llama 3.1][llama] for text transformation tasks
 
 **Where Local AI Falls Short** (for me):
 - **Agentic workflows**: Local agents (Qwen models, GLM 4.6) haven't matched cloud quality
@@ -356,7 +351,7 @@ So it's useful across multiple domains:
 ## Automation & Workflows
 
 ### Automation Pipelines
-- **N8N**: Visual workflow automation
+- **[N8N][n8n]**: Visual workflow automation
 
 ### Voice-First Workflows
 
@@ -383,59 +378,56 @@ This document itself was created using this pattern:
 ## Google Ecosystem
 
 **Integrated Services:**
-- **NotebookLM**: Free with Google Workspace - **Favorite tool** for research and knowledge synthesis
-- **Gemini**: Free with Google Workspace
-- **AI Studio**: Development environment
-- **AI Studio + Cloud Run**: Production deployments (API costs apply)
+- **[NotebookLM][notebooklm]**: Free with Google Workspace - **Favorite tool** for research and knowledge synthesis
+- **[Gemini][gemini]**: Free with Google Workspace
+- **[AI Studio][ai-studio]**: Development environment
+- **[AI Studio][ai-studio] + [Cloud Run][cloud-run]**: Production deployments (API costs apply)
 
-### NotebookLM: The Standout Tool
+### NotebookLM
 
-**Why It's Reached Maturity:**
-- Originally limited to 10 sources; now much more capable
-- Excellent at assembling building blocks: retrieval → questions → generation based on retrieval
-- Alternative to LlamaIndex for many use cases, but much simpler
+**Why I Use It:**
+- Originally limited to 10 sources; now more capable
+- Good at assembling building blocks: retrieval → questions → generation based on retrieval
+- Alternative to [LlamaIndex][llamaindex] for many use cases, but simpler
 
-**Perfect Use Case - Deliberate Context Generation:**
+**Use Case - Deliberate Context Generation:**
 
-I realized NotebookLM is actually perfect for a pattern I've been working on for a while. I was going to call it "AI, I have a problem" - which I realized is probably not the best marketing name I've ever come up with.
+I've been working on a pattern for a while around building context once rather than repeatedly.
 
-**The Pattern & Real Example**:
+**The Pattern**:
 
-The pattern addresses this: when you have a problem to solve that's not just asking for a pasta recipe, but something personal and ongoing.
+When you have an ongoing situation that's personal and complex - not just asking for a pasta recipe.
 
 **Real Example - Health Context**:
-I had gallbladder surgery a number of years ago. Since then, I've had really bad issues with all manner of digestion - bloating, nausea, you name it. I don't really enjoy narrating the whole story every time I need help with meal planning or dietary advice.
+I had gallbladder surgery years ago. Since then, I've had digestive issues - bloating, nausea, various problems. I don't enjoy narrating the whole story every time I need help with meal planning or dietary advice.
 
-**The Solution**:
-1. Record the context once (30-minute voice note covering everything comprehensively)
+**The Approach**:
+1. Record the context once (30-minute voice note covering everything)
 2. Transform to text
 3. Use as workspace foundation in NotebookLM
-4. Now I can get shopping lists that are better for me, recipes tailored to my needs - all without repetitively defining context
+4. Get shopping lists, recipes tailored to my needs - without re-explaining context
 
-**Why This Is Powerful**:
-When you're working on a few of these "problems" (health, project planning, personal circumstances), you really see the advantage of this approach over time, as opposed to repetitively defining context every single time.
+**Why This Helps**:
+When you're working on a few of these ongoing situations (health, project planning, personal circumstances), you see the advantage of this approach over repeatedly defining context.
 
 **Two Approaches to Context:**
-1. **OpenAI's approach**: Chat first, AI extracts memories to memory layer over time
-2. **My approach**: Generate deliberate context upfront through structured recording
+1. **OpenAI's approach**: Chat first, AI extracts memories over time
+2. **This approach**: Generate deliberate context upfront through structured recording
 
-I'm not saying OpenAI's approach is wrong or mine is better - I'm just saying it's a different method for tackling the same question: How can we make AI much more useful when it's personalized to you and your particular life circumstances? How can we engineer that?
+Both are trying to solve the same question: How can AI be more useful when personalized to your life circumstances?
 
-**Significant Advantage Over Repetitive Context**:
-There's another significant advantage to this approach beyond just not repeating yourself. I've done some modeling in interview-first context generation, or what I've called "deliberate context generation."
-
-**Why I'm a Big Fan of Voice Workflows**:
-I can record a voice note like this and in 30 minutes gather a huge amount of information. Put that into a little transformation (extracting the context data from that), and then that's the starting context.
+**Why Voice Workflows**:
+I can record a voice note and in 30 minutes gather a lot of information. Transform that (extracting the context data), and that's the starting context.
 
 **Working in Reverse**:
-It's really working in reverse to the way OpenAI is doing it. They have you chat with ChatGPT, and then over time it learns things about you and extracts that to a memory layer. This is working backwards.
+This is working backwards from the OpenAI approach. They have you chat with ChatGPT, and it learns about you over time. This generates context upfront.
 
-**Experimental Variations**:
-- **Basic one**: Just speak for 30 minutes into a microphone
-- **Slightly jazzier one**: A bot asks me questions like a model interview
-- That workflow has actually worked very well - what I'm doing here with this stack documentation is exactly that: the bot came up with questions, and I can speak for 30 minutes. That's my context data.
+**Variations**:
+- **Basic**: Speak for 30 minutes into a microphone
+- **Structured**: A bot asks questions like an interview
+- This stack documentation used the second approach: the bot came up with questions, I spoke for 30 minutes
 
-> **Why This Works**: AI is significantly more useful when personalized to your life circumstances. This pattern engineers that personalization deliberately rather than hoping it emerges from conversation. You're creating rich, comprehensive context in a single focused session.
+> **Note**: This pattern creates comprehensive context in a single focused session rather than hoping it emerges from conversation.
 
 ---
 
@@ -461,31 +453,105 @@ It's really working in reverse to the way OpenAI is doing it. They have you chat
 
 ## Key Insights & Philosophy
 
-### The Most Transformative Use Cases
+### What I Find Most Useful
 
-**Simple Text Transformations Are Underrated**:
-The most transformative and robust uses for LLMs are frequently simple text transformations. For these tasks:
+**Simple Text Transformations**:
+Many practical uses for LLMs are simple text transformations. For these:
 - You don't need high-reasoning models
-- You want excellent instruction-following capability
-- Models like IBM Granite, Microsoft Phi excel here
-- Cost-effective, reliable, practical
+- You want good instruction-following
+- Models like IBM Granite, Microsoft Phi work well
+- Cost-effective and reliable
 
 > **Example**: Running evaluations across 10+ models to find which handles "AI Brevity" best (avoiding verbose outputs that resist system prompting)
 
-**Programmatic AI > Chatbots**:
-Where AI becomes truly exciting is in programmatic integration and instructional AI, not just chatbots. This brings independent value through automation, batch processing, and system integration.
+**Programmatic AI**:
+I find programmatic integration and instructional AI more useful than chatbots. This provides value through automation, batch processing, and system integration.
 
-### Architecture Philosophy
+### How I Think About This Stack
 
-This AI stack is designed around several core principles:
+This AI stack reflects a few principles:
 
 1. **Flexibility**: Multiple options for each capability (premium vs. budget, cloud vs. local)
 2. **Task-Appropriate Tooling**: Different tools for different workload types (sync vs. async, batch vs. real-time)
-3. **Security Tiers**: Options ranging from cloud APIs to fully air-gapped local inference
-4. **Cost Optimization**: Balance between premium services and cost-effective alternatives
-5. **Developer Experience**: Strong emphasis on CLI tools and automation pipelines
+3. **Security Tiers**: Options from cloud APIs to air-gapped local inference
+4. **Cost Balance**: Premium services for some things, cost-effective alternatives for others
+5. **CLI Tools**: Preference for CLI tools and automation pipelines
 6. **Stack Consolidation**: Minimize API fragmentation through unified platforms (OpenRouter, Replicate, Fal)
-7. **Expense Management**: Practical consideration for accounting and budgeting (important for business use)
+7. **Expense Management**: Practical accounting and budgeting (matters for business use)
+
+---
+
+## Links & Resources
+
+### Core AI Platforms
+[claude]: https://claude.ai
+[claude-code]: https://docs.claude.com/claude-code
+[chatgpt]: https://chat.openai.com
+[openai]: https://openai.com
+[gemini]: https://gemini.google.com
+[openrouter]: https://openrouter.ai
+
+### Development Tools
+[codex]: https://github.com/features/copilot
+[aider]: https://aider.chat
+[github]: https://github.com
+[open-interpreter]: https://github.com/KillianLucas/open-interpreter
+
+### Model Context Protocol (MCP)
+[smithery]: https://smithery.ai
+[context-mcp]: https://github.com/modelcontextprotocol/servers
+
+### Speech & Voice
+[whisper]: https://openai.com/research/whisper
+[assemblyai]: https://www.assemblyai.com
+[deepgram]: https://deepgram.com
+[speechmatics]: https://www.speechmatics.com
+[gladio]: https://www.gladia.io
+[lemonfox]: https://lemonfox.ai
+[blabby]: https://blabby.co
+[elevenlabs]: https://elevenlabs.io
+[edenai]: https://www.edenai.co
+
+### Generative AI Platforms
+[replicate]: https://replicate.com
+[fal]: https://fal.ai
+[fireworks]: https://fireworks.ai
+
+### Data & Retrieval
+[firecrawl]: https://www.firecrawl.dev
+[ragie]: https://www.ragie.ai
+[supermemory]: https://supermemory.ai
+[pinecone]: https://www.pinecone.io
+[qdrant]: https://qdrant.tech
+[mistral]: https://mistral.ai
+[llamaindex]: https://www.llamaindex.ai
+
+### Cloud & Deployment
+[gcp]: https://cloud.google.com
+[vercel]: https://vercel.com
+[netlify]: https://www.netlify.com
+[runpod]: https://www.runpod.io
+[modal]: https://modal.com
+[hf-spaces]: https://huggingface.co/spaces
+
+### Local AI
+[lmstudio]: https://lmstudio.ai
+[ollama]: https://ollama.com
+[amd-radeon]: https://www.amd.com/en/graphics/radeon-rx-graphics
+[rocm]: https://www.amd.com/en/products/software/rocm.html
+[nvidia]: https://www.nvidia.com
+[llama]: https://ai.meta.com/llama/
+
+### Automation
+[n8n]: https://n8n.io
+
+### Google Ecosystem
+[notebooklm]: https://notebooklm.google.com
+[ai-studio]: https://aistudio.google.com
+[cloud-run]: https://cloud.google.com/run
+
+### Self-Hosted & Open Source
+[open-webui]: https://github.com/open-webui/open-webui
 
 ---
 
