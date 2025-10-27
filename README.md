@@ -36,6 +36,7 @@ A point-in-time overview of my AI infrastructure, tools, and services for develo
 *   [Local AI](#local-ai-infrastructure)
 *   [Automation](#automation--workflows)
 *   [Google Ecosystem](#google-ecosystem)
+*   [Honorable Mentions](#honorable-mentions)
 *   [Cost Breakdown](#cost-breakdown)
 *   [Philosophy](#key-insights--philosophy)
 *   [Links & Resources](#links--resources)
@@ -134,8 +135,15 @@ Having a mix of open-source and commercial models through one API is convenient 
 
 *   [Smithery](https://smithery.ai)
 *   [Github](https://github.com/modelcontextprotocol/servers)
-*   [Context](https://context.ai) (for API documentation lookup)
 *   [Firecrawl](#data--retrieval--processing) (covered in Data Retrieval section)
+
+**Useful MCPs:**
+
+*   [Cloudflare MCP](https://github.com/cloudflare/mcp-server-cloudflare): Manage Cloudflare resources and configurations
+*   [Vercel MCP](https://github.com/vercel/mcp-server-vercel): Deploy and manage Vercel projects
+*   [Context7](https://context7.com): Particularly useful MCP for enhanced context management
+*   [GitHub MCP](https://github.com/github/mcp-server-github): Enhanced GitHub integration and repository management
+*   [Goose](https://github.com/block/goose): Valuable MCP tool for development workflows
 
 ---
 
@@ -149,6 +157,13 @@ Having a mix of open-source and commercial models through one API is convenient 
     *   Note: OpenAI's newer model hasn't shown significant improvement in my workloads
 *   Browser-based tools (e.g., [Blabby](https://blabby.co)): Convenient for quick tasks
 *   OS-level integration tools: For continuous dictation
+
+**Mobile/Android:**
+
+*   [Futo Keyboard](https://keyboard.futo.org): Voice typing and ASR on Android
+    *   Privacy-focused keyboard with local speech recognition
+    *   No cloud processing for voice input
+    *   Good accuracy for on-device processing
 
 **Specialized Services:**
 
@@ -331,6 +346,52 @@ If I wrote notes a few years ago, I can use Firecrawl to pull them in. It's quic
 *   [Claude Code](https://docs.claude.com/claude-code) (CLI-based development)
 *   [Codex](https://github.com/features/copilot) (GitHub Copilot integration)
 
+**Vendor CLIs:**
+
+The various vendor CLIs (Gemini CLI, Claude CLI, OpenAI CLI, Qwen CLI) provide valuable direct command-line access to their respective models. These are particularly useful for:
+
+*   Quick API testing and experimentation
+*   Scripting and automation workflows
+*   CI/CD pipeline integration
+*   Direct model access without abstraction layers
+
+### IDEs & Editors
+
+*   [VS Code](https://code.visualstudio.com): Primary IDE for development work
+    *   Extensive extension ecosystem
+    *   Excellent AI integration support
+    *   Strong debugging and Git integration
+
+### Note-Taking & Knowledge Management
+
+*   [Obsidian](https://obsidian.md): Primary tool for note capture and knowledge management
+    *   Local-first, markdown-based note-taking
+    *   Excellent for organizing AI outputs and research
+    *   Graph view for connecting ideas
+    *   Extensible with plugins
+
+> **Note on Output Management**: Output management and storage remains an oddly underaddressed part of the AI universe. Most tools focus on generation, but systematic capture, organization, and retrieval of AI outputs is still largely an afterthought. Having a solid knowledge management system like Obsidian helps bridge this gap.
+
+### Python Environment Management
+
+*   [Conda](https://docs.conda.io): Managing complex Python environments with system dependencies
+    *   Excellent for ML/AI projects with specific library requirements
+    *   Handles non-Python dependencies well
+*   [UV](https://github.com/astral-sh/uv): Modern, fast Python package installer and resolver
+    *   Extremely fast for creating lightweight virtual environments
+    *   Great for quick projects and scripts
+    *   Rust-based performance benefits
+
+### General Tooling
+
+**Containerization & Development:**
+
+*   [Docker](https://www.docker.com): Essential for containerized development, especially for local workloads
+    *   Useful for isolating dependencies
+    *   Creating reproducible development environments
+    *   Testing deployment configurations locally
+    *   Running services and databases for development
+
 ### Code Hosting
 
 *   [GitHub](https://github.com) (primary repository hosting)
@@ -361,6 +422,14 @@ If I wrote notes a few years ago, I can use Firecrawl to pull them in. It's quic
 *   [Hugging Face Spaces](https://huggingface.co/spaces): Rapid prototyping and lightweight app hosting
     *   Supports private deployments
     *   Excellent for quick experiments
+
+### Media Storage & Management
+
+*   [Cloudinary](https://cloudinary.com): AI-friendly media storage and transformation
+    *   Optimized for AI-generated images and media assets
+    *   Automatic optimization and transformation APIs
+    *   CDN delivery for fast access
+    *   Good integration with generative AI workflows
 
 ---
 
@@ -487,20 +556,20 @@ I've been working on a pattern for a while around building context once rather t
 
 When you have an ongoing situation that's personal and complex - not just asking for a pasta recipe.
 
-**Real Example - Health Context**:
+**Real Example - Home Lab Infrastructure**:
 
-I had gallbladder surgery years ago. Since then, I've had digestive issues - bloating, nausea, various problems. I don't enjoy narrating the whole story every time I need help with meal planning or dietary advice.
+When managing a home lab with multiple servers, network configurations, hardware specs, and custom setups, it's tedious to re-explain the entire infrastructure every time you need help troubleshooting or planning an upgrade.
 
 **The Approach**:
 
-1.  Record the context once (30-minute voice note covering everything)
+1.  Record the context once (30-minute voice note covering network topology, hardware specs, software stack, configuration decisions)
 2.  Transform to text
 3.  Use as workspace foundation in NotebookLM
-4.  Get shopping lists, recipes tailored to my needs - without re-explaining context
+4.  Get troubleshooting help, upgrade recommendations, configuration suggestions - without re-explaining your entire setup
 
 **Why This Helps**:
 
-When you're working on a few of these ongoing situations (health, project planning, personal circumstances), you see the advantage of this approach over repeatedly defining context.
+When you're working on a few of these ongoing situations (home lab infrastructure, project architecture, complex workflows), you see the advantage of this approach over repeatedly defining context.
 
 **Two Approaches to Context:**
 
@@ -524,6 +593,33 @@ This is working backwards from the OpenAI approach. They have you chat with Chat
 *   This stack documentation used the second approach: the bot came up with questions, I spoke for 30 minutes
 
 > **Note**: This pattern creates comprehensive context in a single focused session rather than hoping it emerges from conversation.
+
+---
+
+## Honorable Mentions
+
+### Privacy-First AI
+
+*   [Lumo](https://proton.me/ai) (by Proton): Privacy-focused AI assistant
+    *   Built by Proton with strong privacy guarantees
+    *   Good option for users already in the Proton ecosystem
+    *   Emphasis on data protection and user privacy
+*   [Venice.ai](https://venice.ai): Privacy-first AI platform
+    *   No data collection or tracking
+    *   Uncensored model access
+    *   Anonymous usage supported
+
+### Community & News
+
+*   [Reddit](https://www.reddit.com): Essential for AI news and discussions
+    *   Subreddits like r/LocalLLaMA, r/StableDiffusion, r/MachineLearning
+    *   Real-time updates on model releases and techniques
+    *   Community troubleshooting and experience sharing
+*   [Discord](https://discord.com): Primary platform for AI community conversations
+    *   Most AI projects maintain active Discord servers
+    *   Direct access to developers and community experts
+    *   Real-time support and collaboration
+    *   Examples: Ollama, Stable Diffusion, various model communities
 
 ---
 
@@ -594,14 +690,24 @@ This AI stack reflects a few principles:
 ### Development Tools
 
 *   [Aider](https://aider.chat) - AI pair programming
+*   [Conda](https://docs.conda.io) - Python environment management
+*   [Docker](https://www.docker.com) - Containerization platform
 *   [GitHub](https://github.com) - Code hosting
 *   [GitHub Copilot](https://github.com/features/copilot) - Code completion
+*   [Obsidian](https://obsidian.md) - Note-taking and knowledge management
 *   [Open Interpreter](https://github.com/KillianLucas/open-interpreter) - Natural language interface
+*   [UV](https://github.com/astral-sh/uv) - Fast Python package installer
+*   [VS Code](https://code.visualstudio.com) - Primary IDE
 
 ### Model Context Protocol (MCP)
 
 *   [MCP Servers](https://github.com/modelcontextprotocol/servers) - Official MCP servers
 *   [Smithery](https://smithery.ai) - MCP marketplace
+*   [Context7](https://context7.com) - Enhanced context management
+*   [Cloudflare MCP](https://github.com/cloudflare/mcp-server-cloudflare) - Cloudflare resource management
+*   [Vercel MCP](https://github.com/vercel/mcp-server-vercel) - Vercel project management
+*   [GitHub MCP](https://github.com/github/mcp-server-github) - Enhanced GitHub integration
+*   [Goose](https://github.com/block/goose) - Development workflow MCP
 
 ### Speech & Voice
 
@@ -610,6 +716,7 @@ This AI stack reflects a few principles:
 *   [Deepgram](https://deepgram.com) - Task-dependent
 *   [Eden AI](https://www.edenai.co) - Multi-provider batching
 *   [ElevenLabs](https://elevenlabs.io) - Premium quality TTS
+*   [Futo Keyboard](https://keyboard.futo.org) - Android voice typing/ASR
 *   [Gladia](https://www.gladia.io) - Solid performance
 *   [Lemonfox](https://lemonfox.ai) - Budget-friendly
 *   [Speechmatics](https://www.speechmatics.com) - Advanced voice platform
@@ -633,6 +740,7 @@ This AI stack reflects a few principles:
 
 ### Cloud & Deployment
 
+*   [Cloudinary](https://cloudinary.com) - AI-friendly media storage
 *   [Google Cloud Platform](https://cloud.google.com) - Primary cloud
 *   [Hugging Face Spaces](https://huggingface.co/spaces) - Rapid prototyping
 *   [Modal](https://modal.com) - Serverless compute
@@ -662,3 +770,10 @@ This AI stack reflects a few principles:
 ### Self-Hosted & Open Source
 
 *   [Open WebUI](https://github.com/open-webui/open-webui) - Self-hosted interface
+
+### Honorable Mentions
+
+*   [Discord](https://discord.com) - AI community platform
+*   [Lumo](https://proton.me/ai) - Privacy-focused AI by Proton
+*   [Reddit](https://www.reddit.com) - AI news and discussions
+*   [Venice.ai](https://venice.ai) - Privacy-first AI platform
