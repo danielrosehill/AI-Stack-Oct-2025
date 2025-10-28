@@ -399,6 +399,8 @@ The various vendor CLIs (Gemini CLI, Claude CLI, OpenAI CLI, Qwen CLI) provide v
     *   Great for quick projects and scripts
     *   Rust-based performance benefits
 
+---
+
 ### General Tooling
 
 **Containerization & Development:**

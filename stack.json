@@ -1,4 +1,4 @@
-{
+w{
   "metadata": {
     "title": "AI Stack - October 2025",
     "date": "2025-10-27",
@@ -519,6 +519,20 @@
             "Excellent AI integration support",
             "Strong debugging and Git integration"
           ]
+        }
+      ],
+      "browsers": [
+        {
+          "name": "Firefox Developer Edition",
+          "url": "https://www.mozilla.org/en-US/firefox/developer/",
+          "description": "Underappreciated browser for development work",
+          "features": [
+            "Built-in developer tools optimized for web development",
+            "Advanced debugging and inspection capabilities",
+            "Privacy-focused with strong tracking protection",
+            "Excellent for testing responsive designs and web APIs"
+          ],
+          "note": "Not strictly an AI tool, but an essential part of the development workflow when building and testing AI-powered web applications"
         }
       ],
       "note_taking_knowledge_management": [
